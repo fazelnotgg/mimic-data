@@ -1,0 +1,54 @@
+{
+  "name": "mimic-data",
+  "version": "1.0.2",
+  "description": "Lightweight, zero-dependency library for generating realistic dummy data with strong localization support",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "fake-data",
+    "mock-data",
+    "dummy-data",
+    "localization",
+    "typescript",
+    "zero-dependency",
+    "data-generator",
+    "faker",
+    "mimic",
+    "realistic-data"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mimic-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/mimic-data/issues"
+  },
+  "homepage": "https://github.com/yourusername/mimic-data#readme"
+}
