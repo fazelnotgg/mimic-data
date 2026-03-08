@@ -76,5 +76,37 @@ export const fr_FR: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+33 # ## ## ## ##',
+    '0# ## ## ## ##',
+    '+33 (0)# ## ## ## ##',
+    '06 ## ## ## ##',
+    '07 ## ## ## ##'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.fr', 'outlook.fr', 'hotmail.fr', 'orange.fr',
+    'free.fr', 'laposte.net', 'sfr.fr', 'bbox.fr', 'numericable.fr'
+  ],
+
+  companyNames: [
+    'TotalEnergies SE', 'LVMH Moët Hennessy', 'L\'Oréal SA', 'Sanofi SA',
+    'Air Liquide SA', 'Renault SA', 'Peugeot SA', 'Airbus SE', 'Thales SA',
+    'Société Générale', 'BNP Paribas', 'Crédit Agricole', 'Carrefour SA',
+    'Danone SA', 'Hermès International', 'Chanel SA', 'Dassault Aviation'
+  ],
+
+  industries: [
+    'Technologie', 'Finance', 'Santé', 'Éducation', 'Commerce de détail',
+    'Fabrication', 'Médias', 'Télécommunications', 'Énergie', 'Transport',
+    'Immobilier', 'Conseil', 'Hôtellerie', 'Automobile', 'Aérospatial'
+  ],
+
+  catchPhrases: [
+    'Innover pour l\'avenir', 'Votre réussite est notre métier', 'Construire l\'avenir ensemble',
+    'L\'excellence à la française', 'Qualité et innovation', 'Engagement et confiance',
+    'Solutions durables', 'Créer de la valeur', 'Votre partenaire de croissance'
+  ]
 };

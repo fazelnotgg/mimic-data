@@ -63,5 +63,38 @@ export const pl_PL: LocaleDefinition = {
     const part1 = String(Random.int(10, 99));
     const part2 = String(Random.int(100, 999));
     return `${part1}-${part2}`;
-  }
+  },
+
+  phoneFormats: [
+    '+48 ### ### ###',
+    '### ### ###',
+    '+48 ## ### ## ##',
+    '## ### ## ##',
+    '+48 (##) ###-##-##',
+    '(##) ###-##-##'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'wp.pl', 'onet.pl', 'interia.pl', 'o2.pl',
+    'yahoo.com', 'outlook.com', 'hotmail.com', 'tlen.pl', 'gazeta.pl'
+  ],
+
+  companyNames: [
+    'PKN Orlen SA', 'CD Projekt SA', 'PZU SA', 'PKO Bank Polski', 'PGE SA',
+    'KGHM Polska Miedź', 'Tauron Polska Energia', 'Energa SA', 'LOTOS SA',
+    'Telekom Polska', 'Orange Polska', 'Play', 'Plus', 'T-Mobile Polska',
+    'Allegro.pl', 'Dino SA', 'Jeronimo Martins', 'Żabka Polska'
+  ],
+
+  industries: [
+    'Technologia', 'Finanse', 'Zdrowie', 'Edukacja', 'Detal',
+    'Produkcja', 'Media', 'Telekomunikacja', 'Energetyka', 'Transport',
+    'Nieruchomości', 'Konsulting', 'Hotele', 'Motoryzacja', 'Lotnictwo'
+  ],
+
+  catchPhrases: [
+    'Innowacje dla przyszłości', 'Twój sukces to nasza sprawa', 'Budujemy przyszłość razem',
+    'Jakość i zaufanie', 'Doskonałość i zaangażowanie', 'Zrównoważone rozwiązania',
+    'Tworzymy wartość', 'Twój zaufany partner', 'Prowadzimy zmiany'
+  ]
 };

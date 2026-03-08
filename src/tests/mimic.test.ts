@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { createMimic, locales } from '../index';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { createMimic, locales, Random } from '../index';
 
 describe('Mimic - Identity', () => {
   it('should generate first name with gender', () => {
@@ -141,14 +141,237 @@ describe('Mimic - Locale Switching', () => {
   it('should switch locale correctly', () => {
     const mimic = createMimic('en_US');
     const usName = mimic.identity.fullName();
-    
+
     mimic.setLocale(locales.ja_JP);
     const jpName = mimic.identity.fullName();
-    
+
     expect(usName).not.toBe(jpName);
   });
 
   it('should throw error for invalid locale', () => {
     expect(() => createMimic('invalid_locale')).toThrow();
+  });
+});
+
+describe('Mimic - Bulk Generation', () => {
+  it('should generate multiple persons at once', () => {
+    const mimic = createMimic('en_US');
+    const persons = mimic.identity.persons(5);
+
+    expect(persons).toHaveLength(5);
+    persons.forEach(person => {
+      expect(person).toHaveProperty('firstName');
+      expect(person).toHaveProperty('fullName');
+      expect(person).toHaveProperty('age');
+    });
+  });
+
+  it('should generate multiple addresses at once', () => {
+    const mimic = createMimic('en_US');
+    const addresses = mimic.location.addresses(3);
+
+    expect(addresses).toHaveLength(3);
+    addresses.forEach(address => {
+      expect(address).toHaveProperty('street');
+      expect(address).toHaveProperty('city');
+      expect(address).toHaveProperty('fullAddress');
+    });
+  });
+
+  it('should generate multiple physical data at once', () => {
+    const mimic = createMimic('en_US');
+    const physicalData = mimic.physical.datas(4);
+
+    expect(physicalData).toHaveLength(4);
+    physicalData.forEach(data => {
+      expect(data).toHaveProperty('height');
+      expect(data).toHaveProperty('weight');
+    });
+  });
+
+  it('should generate multiple work data at once', () => {
+    const mimic = createMimic('en_US');
+    const workData = mimic.work.datas(3);
+
+    expect(workData).toHaveLength(3);
+    workData.forEach(data => {
+      expect(data).toHaveProperty('jobTitle');
+      expect(data).toHaveProperty('department');
+    });
+  });
+
+  it('should generate complete mock entities', () => {
+    const mimic = createMimic('id_ID');
+    const entities = mimic.generateMockEntities(5, { gender: 'male', ageRange: { min: 25, max: 35 } });
+
+    expect(entities).toHaveLength(5);
+    entities.forEach(entity => {
+      expect(entity).toHaveProperty('fullName');
+      expect(entity).toHaveProperty('fullAddress');
+      expect(entity).toHaveProperty('height');
+      expect(entity).toHaveProperty('jobTitle');
+      expect(entity.gender).toBe('male');
+      expect(entity.age).toBeGreaterThanOrEqual(25);
+      expect(entity.age).toBeLessThanOrEqual(35);
+    });
+  });
+});
+
+describe('Mimic - Unique Generation', () => {
+  it('should generate unique persons (no duplicate full names)', () => {
+    const mimic = createMimic('en_US');
+    const persons = mimic.identity.uniquePersons(10);
+
+    const fullNames = persons.map(p => p.fullName);
+    const uniqueNames = new Set(fullNames);
+
+    expect(fullNames.length).toBe(uniqueNames.size);
+  });
+
+  it('should generate unique addresses (no duplicate full addresses)', () => {
+    const mimic = createMimic('en_US');
+    const addresses = mimic.location.uniqueAddresses(10);
+
+    const fullAddresses = addresses.map(a => a.fullAddress);
+    const uniqueAddresses = new Set(fullAddresses);
+
+    expect(fullAddresses.length).toBe(uniqueAddresses.size);
+  });
+
+  it('should generate unique job titles', () => {
+    const mimic = createMimic('en_US');
+    const jobTitles = mimic.work.uniqueJobTitles(5);
+
+    const uniqueTitles = new Set(jobTitles);
+    expect(jobTitles.length).toBe(uniqueTitles.size);
+  });
+
+  it('should throw error when requesting more unique values than available', () => {
+    const mimic = createMimic('en_US');
+    // Request more unique job titles than available in the locale
+    expect(() => mimic.work.uniqueJobTitles(1000)).toThrow();
+  });
+});
+
+describe('Random - Seeded Generation', () => {
+  beforeEach(() => {
+    Random.seed(12345);
+  });
+
+  afterEach(() => {
+    Random.unseed();
+  });
+
+  it('should generate reproducible sequences with seed', () => {
+    Random.seed(12345);
+    const values1 = [Random.int(1, 100), Random.int(1, 100), Random.int(1, 100)];
+
+    Random.seed(12345);
+    const values2 = [Random.int(1, 100), Random.int(1, 100), Random.int(1, 100)];
+
+    expect(values1).toEqual(values2);
+  });
+
+  it('should generate different sequences with different seeds', () => {
+    Random.seed(12345);
+    const values1 = [Random.int(1, 100), Random.int(1, 100), Random.int(1, 100)];
+
+    Random.seed(54321);
+    const values2 = [Random.int(1, 100), Random.int(1, 100), Random.int(1, 100)];
+
+    expect(values1).not.toEqual(values2);
+  });
+
+  it('should generate reproducible person data with seed', () => {
+    const mimic = createMimic('en_US');
+
+    Random.seed(999);
+    const person1 = mimic.identity.person('male', { min: 20, max: 30 });
+
+    Random.seed(999);
+    const person2 = mimic.identity.person('male', { min: 20, max: 30 });
+
+    expect(person1.firstName).toBe(person2.firstName);
+    expect(person1.lastName).toBe(person2.lastName);
+    expect(person1.age).toBe(person2.age);
+  });
+
+  it('should generate reproducible full mock entities with seed', () => {
+    const mimic = createMimic('id_ID');
+
+    Random.seed(777);
+    const entities1 = mimic.generateMockEntities(3);
+
+    Random.seed(777);
+    const entities2 = mimic.generateMockEntities(3);
+
+    expect(entities1.map(e => e.fullName)).toEqual(entities2.map(e => e.fullName));
+    expect(entities1.map(e => e.fullAddress)).toEqual(entities2.map(e => e.fullAddress));
+  });
+});
+
+describe('Random - Multiple and Unique Utilities', () => {
+  it('should generate multiple values using Random.multiple', () => {
+    const results = Random.multiple(() => Random.int(1, 10), 5);
+    expect(results).toHaveLength(5);
+    results.forEach(r => {
+      expect(r).toBeGreaterThanOrEqual(1);
+      expect(r).toBeLessThanOrEqual(10);
+    });
+  });
+
+  it('should generate unique values using Random.unique', () => {
+    const results = Random.unique(() => Random.int(1, 100), 10);
+    const uniqueResults = new Set(results);
+    expect(results.length).toBe(uniqueResults.size);
+  });
+
+  it('should throw error when unique generation fails', () => {
+    // Try to generate 20 unique values from only 5 possible values
+    expect(() => Random.unique(() => Random.int(1, 5), 20)).toThrow();
+  });
+});
+
+describe('Mimic - Performance Caching', () => {
+  it('should cache identity generator', () => {
+    const mimic = createMimic('en_US');
+    const identity1 = mimic.identity;
+    const identity2 = mimic.identity;
+
+    expect(identity1).toBe(identity2);
+  });
+
+  it('should cache location generator', () => {
+    const mimic = createMimic('en_US');
+    const location1 = mimic.location;
+    const location2 = mimic.location;
+
+    expect(location1).toBe(location2);
+  });
+
+  it('should cache physical generator', () => {
+    const mimic = createMimic('en_US');
+    const physical1 = mimic.physical;
+    const physical2 = mimic.physical;
+
+    expect(physical1).toBe(physical2);
+  });
+
+  it('should cache work generator', () => {
+    const mimic = createMimic('en_US');
+    const work1 = mimic.work;
+    const work2 = mimic.work;
+
+    expect(work1).toBe(work2);
+  });
+
+  it('should clear caches when locale is changed', () => {
+    const mimic = createMimic('en_US');
+    const identity1 = mimic.identity;
+
+    mimic.setLocale(locales.ja_JP);
+    const identity2 = mimic.identity;
+
+    expect(identity1).not.toBe(identity2);
   });
 });

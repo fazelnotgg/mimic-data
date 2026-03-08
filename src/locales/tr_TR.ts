@@ -62,5 +62,40 @@ export const tr_TR: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+90 (###) ###-####',
+    '0(###) ###-####',
+    '0### ###-####',
+    '+90 ### ###-####',
+    '05## ###-####',
+    '053# ###-####',
+    '054# ###-####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com',
+    'yandex.com.tr', 'mail.ru', 'yandex.ru', 'live.com',
+    'icloud.com', 'protonmail.com', 'tutanota.com'
+  ],
+
+  companyNames: [
+    'Türk Hava Yolları', 'Türk Telekom', 'Tüpraş', 'BİM Birleşik Mağazalar',
+    'Ereğli Demir Çelik', 'Aygaz', 'Koç Holding', 'Sabancı Holding',
+    'Vestel', 'Arçelik', 'Turkcell', 'Vodafone Türkiye', 'Halkbank',
+    'Ziraat Bankası', 'İş Bankası', 'Garanti BBVA', 'Akbank', 'Yapı Kredi'
+  ],
+
+  industries: [
+    'Teknoloji', 'Finans', 'Sağlık', 'Eğitim', 'Perakende',
+    'Üretim', 'Medya', 'Telekomünikasyon', 'Enerji', 'Ulaştırma',
+    'Gayrimenkul', 'Danışmanlık', 'Otelcilik', 'Otomotiv', 'Havacılık'
+  ],
+
+  catchPhrases: [
+    'Gelecek için yenilik', 'Başarınız işimizdir', 'Birlikte gelecek inşa ediyoruz',
+    'Kalite ve güven', 'Mükemmellik ve bağlılık', 'Sürdürülebilir çözümler',
+    'Değer yaratıyoruz', 'Güvenilir ortağınız', 'Değişime öncülük ediyoruz'
+  ]
 };

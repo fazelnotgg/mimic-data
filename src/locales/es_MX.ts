@@ -62,5 +62,42 @@ export const es_MX: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+52 ## #### ####',
+    '0## #### ####',
+    '+52 (##) #### ####',
+    '(##) #### ####',
+    '1## #### ####',
+    '55 #### ####',
+    '33 #### ####',
+    '81 #### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.mx', 'outlook.com', 'hotmail.com', 'live.com',
+    'prodigy.net.mx', 'cablevision.net.mx', 'telmex.net.mx', 'uninet.com.mx',
+    'alestra.com.mx', 'totalplay.net'
+  ],
+
+  companyNames: [
+    'América Móvil', 'Grupo México', 'Grupo Aeroportuario del Sureste', 'Fomento Económico Mexicano',
+    'Grupo Bimbo', 'Cemex', 'Grupo Televisa', 'TV Azteca', 'Grupo Carso',
+    'Grupo Salinas', 'Banco Santander México', 'BBVA México', 'Banorte',
+    'Aeroméxico', 'Volaris', 'Interjet', 'Grupo Modelo', 'Heineken México',
+    'Walmart de México', 'Organización Soriana', 'El Puerto de Liverpool'
+  ],
+
+  industries: [
+    'Tecnología', 'Finanzas', 'Salud', 'Educación', 'Venta minorista',
+    'Fabricación', 'Medios', 'Telecomunicaciones', 'Energía', 'Transporte',
+    'Inmobiliaria', 'Consultoría', 'Hostelería', 'Automoción', 'Aeroespacial'
+  ],
+
+  catchPhrases: [
+    'Innovando para el futuro', 'Su éxito es nuestro negocio', 'Construyendo el futuro juntos',
+    'Calidad y confianza', 'Excelencia y compromiso', 'Soluciones sostenibles',
+    'Creamos valor', 'Su socio de confianza', 'Liderando el cambio'
+  ]
 };

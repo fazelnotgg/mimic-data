@@ -77,5 +77,39 @@ export const id_ID: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+62 ###-####-####',
+    '08##-####-####',
+    '(021) ####-####',
+    '021-####-####',
+    '+62 (###) ###-####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com',
+    'icloud.com', 'protonmail.com', 'mail.com',
+    'gmail.co.id', 'yahoo.co.id', 'plasa.com', 'telkom.net'
+  ],
+
+  companyNames: [
+    'PT Astra International', 'PT Telkom Indonesia', 'PT Bank Central Asia',
+    'PT Unilever Indonesia', 'PT Indofood Sukses Makmur', 'PT Garuda Indonesia',
+    'PT Pertamina', 'PT Bank Mandiri', 'PT Bukit Asam', 'PT Freeport Indonesia',
+    'PT Gudang Garam', 'PT Djarum', 'PT HM Sampoerna', 'PT Kalbe Farma',
+    'PT XL Axiata', 'PT Indosat Ooredoo', 'PT Gojek Indonesia', 'PT Traveloka'
+  ],
+
+  industries: [
+    'Teknologi', 'Keuangan', 'Kesehatan', 'Pendidikan', 'Retail',
+    'Manufaktur', 'Media', 'Telekomunikasi', 'Energi', 'Transportasi',
+    'Properti', 'Konsultasi', 'Perhotelan', 'Otomotif', 'Pertambangan'
+  ],
+
+  catchPhrases: [
+    'Inovasi untuk masa depan', 'Solusi terbaik untuk Anda', 'Membangun bersama menuju sukses',
+    'Kualitas terbaik, pelayanan prima', 'Mitra terpercaya Anda', 'Menghadirkan kemudahan',
+    'Solusi digital untuk kehidupan', 'Bersama meraih kesuksesan', 'Komitmen untuk keunggulan'
+  ]
 };

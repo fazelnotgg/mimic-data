@@ -63,5 +63,42 @@ export const ar_EG: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+20 ## #### ####',
+    '0## #### ####',
+    '+20 (0)## #### ####',
+    '01# ### ### ##',
+    '010# ### ####',
+    '011# ### ####',
+    '012# ### ####',
+    '015# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com',
+    'live.com', 'icloud.com', 'mail.com',
+    'link.net', 'egynet.com', 'data.com.eg'
+  ],
+
+  companyNames: [
+    'Orange Egypt', 'Vodafone Egypt', 'Etisalat Egypt', 'Telecom Egypt',
+    'National Bank of Egypt', 'Banque Misr', 'Commercial International Bank',
+    'Egyptian Refining Company', 'Elsewedy Electric', 'Orascom Construction',
+    'Ezz Steel', 'Arab African International Bank', 'QNB Al Ahli',
+    'Fawry', 'Jumia Egypt', 'Souq.com'
+  ],
+
+  industries: [
+    'التكنولوجيا', 'المالية', 'الرعاية الصحية', 'التعليم', 'التجزئة',
+    'التصنيع', 'الإعلام', 'الاتصالات', 'الطاقة', 'النقل',
+    'العقارات', 'الاستشارات', 'الضيافة', 'السيارات', 'الطيران'
+  ],
+
+  catchPhrases: [
+    'الابتكار للمستقبل', 'نجاحكم هو عملنا', 'نبني المستقبل معاً',
+    'الجودة والثقة', 'التميز والالتزام', 'حلول مستدامة',
+    'نخلق القيمة', 'شريككم الموثوق', 'نقود التغيير'
+  ]
 };

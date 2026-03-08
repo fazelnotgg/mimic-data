@@ -58,8 +58,41 @@ export const nl_NL: LocaleDefinition = {
 
   generateZipCode(): string {
     const digits = String(Random.int(1000, 9999));
-    const letters = String.fromCharCode(65 + Random.int(0, 25)) + 
+    const letters = String.fromCharCode(65 + Random.int(0, 25)) +
                     String.fromCharCode(65 + Random.int(0, 25));
     return `${digits} ${letters}`;
-  }
+  },
+
+  phoneFormats: [
+    '+31 (0)## ### ####',
+    '0## ### ####',
+    '+31 (0)# ### ####',
+    '0# ### ####',
+    '+31 (0)6 ########',
+    '06 ########'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.nl', 'outlook.com', 'hotmail.nl', 'live.nl',
+    'ziggo.nl', 'kpnmail.nl', 'upcmail.nl', 'home.nl', 'hetnet.nl'
+  ],
+
+  companyNames: [
+    'Royal Dutch Shell', 'ASML Holding', 'Philips NV', 'Unilever NV',
+    'ING Groep', 'Heineken NV', 'Akzo Nobel', 'DSM NV', 'KLM Royal Dutch Airlines',
+    'Rabobank', 'ABN AMRO', 'Ahold Delhaize', 'Wolters Kluwer', 'Adyen NV',
+    'Just Eat Takeaway', 'Prosus NV', 'NN Group', 'Aegon NV'
+  ],
+
+  industries: [
+    'Technologie', 'Financiën', 'Gezondheidszorg', 'Onderwijs', 'Detailhandel',
+    'Productie', 'Media', 'Telecommunicatie', 'Energie', 'Transport',
+    'Onroerend goed', 'Consultancy', 'Horeca', 'Automotive', 'Luchtvaart'
+  ],
+
+  catchPhrases: [
+    'Innoveren voor de toekomst', 'Uw succes is onze zaak', 'Samen de toekomst bouwen',
+    'Kwaliteit en vertrouwen', 'Uitstekendheid en toewijding', 'Duurzame oplossingen',
+    'Waarde creëren', 'Uw vertrouwde partner', 'Verandering leiden'
+  ]
 };

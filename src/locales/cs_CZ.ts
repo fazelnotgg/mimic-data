@@ -61,5 +61,38 @@ export const cs_CZ: LocaleDefinition = {
     const part1 = String(Random.int(100, 999));
     const part2 = String(Random.int(10, 99));
     return `${part1} ${part2}`;
-  }
+  },
+
+  phoneFormats: [
+    '+420 ### ### ###',
+    '### ### ###',
+    '+420 (###) ### ###',
+    '(###) ### ###',
+    '6## ### ###',
+    '7## ### ###'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'seznam.cz', 'email.cz', 'post.cz', 'centrum.cz',
+    'volny.cz', 'atlas.cz', 'iol.cz', 'tiscali.cz', 'outlook.com'
+  ],
+
+  companyNames: [
+    'Škoda Auto', 'ČEZ Group', 'Agrofert', 'Komerční banka', 'Erste Group',
+    'O2 Czech Republic', 'Česká pojišťovna', 'Plzeňský Prazdroj', 'Fortuna',
+    'Avast Software', 'JetBrains', 'Rohlik.cz', 'Alza.cz', 'Mall.cz',
+    'Czech Airlines', 'České dráhy', 'Pražská energetika'
+  ],
+
+  industries: [
+    'Technologie', 'Finance', 'Zdravotnictví', 'Vzdělávání', 'Maloobchod',
+    'Výroba', 'Média', 'Telekomunikace', 'Energetika', 'Doprava',
+    'Nemovitosti', 'Poradenství', 'Hotely', 'Automobilový průmysl', 'Letectví'
+  ],
+
+  catchPhrases: [
+    'Inovace pro budoucnost', 'Váš úspěch je naše věc', 'Budujeme budoucnost společně',
+    'Kvalita a důvěra', 'Excellence a závazek', 'Udržitelná řešení',
+    'Tvoříme hodnotu', 'Váš spolehlivý partner', 'Vedeme změnu'
+  ]
 };

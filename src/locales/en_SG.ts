@@ -58,5 +58,42 @@ export const en_SG: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(100000, 999999));
-  }
+  },
+
+  phoneFormats: [
+    '+65 #### ####',
+    '#### ####',
+    '+65 (####) ####',
+    '(####) ####',
+    '8### ####',
+    '9### ####',
+    '6### ####',
+    '3### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.sg', 'outlook.com', 'hotmail.com', 'live.com',
+    'singnet.com.sg', 'starhub.com', 'm1.com.sg', 'pacbell.net', 'asianet.com'
+  ],
+
+  companyNames: [
+    'DBS Bank', 'United Overseas Bank', 'Oversea-Chinese Banking Corporation',
+    'Singapore Telecommunications', 'Singapore Airlines', 'Singapore Exchange',
+    'CapitaLand Investment', 'City Developments Limited', 'Genting Singapore',
+    'Wilmar International', 'Thai Beverage', 'Yangzijiang Shipbuilding',
+    'Sembcorp Industries', 'Keppel Corporation', 'Jardine Cycle & Carriage',
+    'Hongkong Land', 'Dairy Farm International', 'Sheng Siong Group'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

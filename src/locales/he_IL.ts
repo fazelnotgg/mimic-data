@@ -59,5 +59,48 @@ export const he_IL: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000000, 9999999));
-  }
+  },
+
+  phoneFormats: [
+    '+972 ## ### ####',
+    '0## ### ####',
+    '+972 (0)## ### ####',
+    '05# ### ####',
+    '050 ### ####',
+    '051 ### ####',
+    '052 ### ####',
+    '053 ### ####',
+    '054 ### ####',
+    '055 ### ####',
+    '056 ### ####',
+    '057 ### ####',
+    '058 ### ####',
+    '059 ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.co.il', 'outlook.co.il', 'hotmail.co.il', 'live.co.il',
+    'walla.co.il', 'nana.co.il', '012.net.il', 'bezeqint.net', 'zahav.net.il'
+  ],
+
+  companyNames: [
+    'Elbit Systems', 'Israel Aerospace Industries', 'Rafael Advanced Defense Systems',
+    'Teva Pharmaceutical Industries', 'Check Point Software Technologies',
+    'Nice Systems', 'Amdocs Limited', 'Verint Systems', 'NICE Ltd',
+    'Bank Hapoalim', 'Bank Leumi', 'Israel Discount Bank', 'Bank Mizrahi-Tefahot',
+    'Cellcom Israel', 'Partner Communications', 'Pelephone Communications',
+    'Bezeq The Israeli Telecommunication', 'Hot Telecommunication Systems'
+  ],
+
+  industries: [
+    'טכנולוגיה', 'פיננסים', 'בריאות', 'חינוך', 'קמעונאות',
+    'ייצור', 'מדיה', 'תקשורת', 'אנרגיה', 'תחבורה',
+    'נדל"ן', 'ייעוץ', 'מלונאות', 'רכב', 'תעופה'
+  ],
+
+  catchPhrases: [
+    'חדשנות לעתיד', 'ההצלחה שלך היא העסק שלנו', 'בונים את העתיד יחד',
+    'איכות ואמון', 'מצוינות ומחויבות', 'פתרונות בני קיימא',
+    'יוצרים ערך', 'השותף האמין שלך', 'מובילים את השינוי'
+  ]
 };

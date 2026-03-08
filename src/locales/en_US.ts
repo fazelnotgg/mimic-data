@@ -88,5 +88,38 @@ export const en_US: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '(###) ###-####',
+    '###-###-####',
+    '###.###.####',
+    '+1 (###) ###-####',
+    '1-###-###-####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'aol.com',
+    'icloud.com', 'protonmail.com', 'mail.com', 'zoho.com', 'yandex.com'
+  ],
+
+  companyNames: [
+    'Acme Corp', 'Globex Corporation', 'Soylent Corp', 'Initech', 'Umbrella Corporation',
+    'Stark Industries', 'Wayne Enterprises', 'Cyberdyne Systems', 'Massive Dynamic',
+    'Hooli', 'Vehement Capital Partners', 'Bluth Company', 'Dunder Mifflin',
+    'Stark Industries', 'Wonka Industries', 'Stark Industries', 'Stark Industries'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transportation',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating tomorrow, today', 'Your success is our business', 'Building the future together',
+    'Empowering possibilities', 'Transforming ideas into reality', 'Excellence in every detail',
+    'Where quality meets innovation', 'Driving progress through technology',
+    'Your partner in growth', 'Making the impossible possible'
+  ]
 };

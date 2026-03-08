@@ -58,5 +58,40 @@ export const da_DK: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+45 ## ## ## ##',
+    '## ## ## ##',
+    '+45 (##) ## ## ##',
+    '(##) ## ## ##',
+    '2# ## ## ##',
+    '3# ## ## ##',
+    '4# ## ## ##',
+    '5# ## ## ##'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.dk', 'outlook.dk', 'hotmail.dk', 'live.dk',
+    'mail.dk', 'telia.dk', 'tdc.dk', 'youmail.dk', 'post.tele.dk'
+  ],
+
+  companyNames: [
+    'A.P. Møller-Mærsk', 'Novo Nordisk', 'Carlsberg Group', 'Vestas Wind Systems',
+    'Danske Bank', 'Nordea', 'Ørsted', 'Coloplast', 'Demant',
+    'ISS A/S', 'DSV A/S', 'Pandora A/S', 'Royal Unibrew',
+    'Tryg A/S', 'GN Store Nord', 'Ambu A/S', 'Zealand Pharma'
+  ],
+
+  industries: [
+    'Teknologi', 'Finans', 'Sundhedsvæsen', 'Uddannelse', 'Detailhandel',
+    'Fremstilling', 'Medier', 'Telekommunikation', 'Energi', 'Transport',
+    'Ejendomme', 'Konsulentvirksomhed', 'Hoteller', 'Automobil', 'Luftfart'
+  ],
+
+  catchPhrases: [
+    'Innovation for fremtiden', 'Din succes er vores sag', 'Bygger fremtiden sammen',
+    'Kvalitet og tillid', 'Excellence og engagement', 'Bæredygtige løsninger',
+    'Skaber værdi', 'Din pålidelige partner', 'Leder forandring'
+  ]
 };

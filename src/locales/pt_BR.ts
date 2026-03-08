@@ -83,5 +83,39 @@ export const pt_BR: LocaleDefinition = {
     const part1 = String(Random.int(10000, 99999));
     const part2 = String(Random.int(100, 999));
     return `${part1}-${part2}`;
-  }
+  },
+
+  phoneFormats: [
+    '+55 (##) #####-####',
+    '(##) #####-####',
+    '(##) ####-####',
+    '+55 ## #####-####',
+    '0## # ####-####',
+    '0800-###-####',
+    '0300-###-####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.br', 'outlook.com', 'hotmail.com', 'uol.com.br',
+    'bol.com.br', 'ig.com.br', 'terra.com.br', 'live.com', 'msn.com'
+  ],
+
+  companyNames: [
+    'Petróleo Brasileiro SA', 'Vale SA', 'Itaú Unibanco', 'Banco do Brasil',
+    'Bradesco SA', 'Caixa Econômica Federal', 'JBS SA', 'Ambev SA', 'B3 SA',
+    'Magazine Luiza', 'Lojas Renner', 'WEG SA', 'Raia Drogasil', 'Suzano SA',
+    'Embraer SA', 'Gol Linhas Aéreas', 'Azul SA', 'Tim Brasil', 'Vivo SA'
+  ],
+
+  industries: [
+    'Tecnologia', 'Finanças', 'Saúde', 'Educação', 'Varejo',
+    'Manufatura', 'Mídia', 'Telecomunicações', 'Energia', 'Transporte',
+    'Imobiliário', 'Consultoria', 'Hotelaria', 'Automotivo', 'Aeroespacial'
+  ],
+
+  catchPhrases: [
+    'Inovando para o futuro', 'Seu sucesso é nosso negócio', 'Construindo o futuro juntos',
+    'Qualidade e confiança', 'Excelência e compromisso', 'Soluções sustentáveis',
+    'Criando valor', 'Seu parceiro de confiança', 'Liderando a mudança'
+  ]
 };

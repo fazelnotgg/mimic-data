@@ -64,5 +64,45 @@ export const ro_RO: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(100000, 999999));
-  }
+  },
+
+  phoneFormats: [
+    '+40 ### ### ####',
+    '0### ### ####',
+    '+40 (0)### ### ####',
+    '07## ### ####',
+    '071# ### ####',
+    '072# ### ####',
+    '073# ### ####',
+    '074# ### ####',
+    '075# ### ####',
+    '076# ### ####',
+    '077# ### ####',
+    '078# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.ro', 'outlook.ro', 'hotmail.ro', 'live.ro',
+    'yahoo.com', 'gmx.com', 'aol.com', 'icloud.com', 'protonmail.com'
+  ],
+
+  companyNames: [
+    'OMV Petrom', 'Romgaz', 'Banca Transilvania', 'BRD Groupe Société Générale',
+    'Digi Communications', 'Orange România', 'Vodafone România', 'Telekom România',
+    'Hidroelectrica', 'Nuclearelectrica', 'Transgaz', 'Transelectrica',
+    'Rompetrol Rafinare', 'OMV Petrom Rafinare', 'Aeroporturi București',
+    'CFR Călători', 'CFR Marfă', 'Poșta Română', 'Electrica SA'
+  ],
+
+  industries: [
+    'Tehnologie', 'Finanțe', 'Sănătate', 'Educație', 'Comerț cu amănuntul',
+    'Producție', 'Media', 'Telecomunicații', 'Energie', 'Transport',
+    'Imobiliare', 'Consultanță', 'Hoteluri', 'Automobile', 'Aviație'
+  ],
+
+  catchPhrases: [
+    'Inovație pentru viitor', 'Succesul dumneavoastră este afacerea noastră', 'Construim viitorul împreună',
+    'Calitate și încredere', 'Excelență și angajament', 'Soluții durabile',
+    'Creăm valoare', 'Partenerul dumneavoastră de încredere', 'Conducem schimbarea'
+  ]
 };

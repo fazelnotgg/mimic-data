@@ -60,5 +60,38 @@ export const it_IT: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+39 0## ### ####',
+    '+39 0## #######',
+    '0## ### ####',
+    '0## #######',
+    '+39 3## ### ####',
+    '3## ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.it', 'outlook.it', 'hotmail.it', 'libero.it',
+    'alice.it', 'tin.it', 'virgilio.it', 'tiscali.it', 'fastwebnet.it'
+  ],
+
+  companyNames: [
+    'Eni SpA', 'Enel SpA', 'Generali Italia', 'Intesa Sanpaolo', 'UniCredit SpA',
+    'Stellantis Italy', 'Ferrari NV', 'Lamborghini SpA', 'Pirelli & C',
+    'Telecom Italia', 'Poste Italiane', 'Leonardo SpA', 'Saipem SpA',
+    'Mediaset SpA', 'Moncler SpA', 'Armani SpA', 'Prada SpA', 'Gucci SpA'
+  ],
+
+  industries: [
+    'Tecnologia', 'Finanza', 'Sanità', 'Istruzione', 'Vendita al dettaglio',
+    'Produzione', 'Media', 'Telecomunicazioni', 'Energia', 'Trasporti',
+    'Immobiliare', 'Consulenza', 'Alberghiero', 'Automobilistico', 'Aerospaziale'
+  ],
+
+  catchPhrases: [
+    'Innovare per il futuro', 'Il vostro successo è il nostro lavoro', 'Costruire il futuro insieme',
+    'Qualità e fiducia', 'Eccellenza e impegno', 'Soluzioni sostenibili',
+    'Creiamo valore', 'Il vostro partner di fiducia', 'Guidare il cambiamento'
+  ]
 };

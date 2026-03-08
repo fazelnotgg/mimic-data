@@ -1,15 +1,15 @@
 {
   "name": "mimic-data",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Lightweight, zero-dependency library for generating realistic dummy data with strong localization support",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "files": [

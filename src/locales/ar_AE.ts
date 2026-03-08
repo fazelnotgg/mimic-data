@@ -59,6 +59,42 @@ export const ar_AE: LocaleDefinition = {
   },
 
   generateZipCode(): string {
-    return ''; // UAE doesn't use postal codes
-  }
+    return '';
+  },
+
+  phoneFormats: [
+    '+971 ## ### ####',
+    '0## ### ####',
+    '+971 (0)## ### ####',
+    '05# ### ####',
+    '050 ### ####',
+    '052 ### ####',
+    '054 ### ####',
+    '056 ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.ae', 'outlook.com', 'hotmail.com',
+    'emirates.net.ae', 'etisalat.ae', 'du.ae', 'mail.ae',
+    'icloud.com', 'protonmail.com'
+  ],
+
+  companyNames: [
+    'Emirates Group', 'Etisalat', 'Emirates NBD', 'ADNOC', 'Dubai World',
+    'Emaar Properties', 'Mubadala Investment', 'DP World', 'Flydubai',
+    'Dubai Islamic Bank', 'First Abu Dhabi Bank', 'Chalhoub Group',
+    'Majid Al Futtaim', 'Al Futtaim Group', 'Jumeirah Group'
+  ],
+
+  industries: [
+    'التكنولوجيا', 'المالية', 'الرعاية الصحية', 'التعليم', 'التجزئة',
+    'التصنيع', 'الإعلام', 'الاتصالات', 'الطاقة', 'النقل',
+    'العقارات', 'الاستشارات', 'الضيافة', 'السيارات', 'الطيران'
+  ],
+
+  catchPhrases: [
+    'الابتكار للمستقبل', 'نجاحكم هو عملنا', 'نبني المستقبل معاً',
+    'الجودة والثقة', 'التميز والالتزام', 'حلول مستدامة',
+    'نخلق القيمة', 'شريككم الموثوق', 'نقود التغيير'
+  ]
 };

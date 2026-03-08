@@ -61,5 +61,42 @@ export const de_CH: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+41 (0)## ### ## ##',
+    '0## ### ## ##',
+    '+41 (0)## ### ## ##',
+    '0## ### ## ##',
+    '07# ### ## ##',
+    '075 ### ## ##',
+    '076 ### ## ##',
+    '077 ### ## ##',
+    '078 ### ## ##',
+    '079 ### ## ##'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.ch', 'outlook.ch', 'hotmail.ch', 'bluewin.ch',
+    'swissonline.ch', 'sunrise.ch', 'quickline.ch', 'gmx.ch', 'mail.ch'
+  ],
+
+  companyNames: [
+    'Nestlé SA', 'Roche Holding', 'Novartis AG', 'UBS Group', 'Credit Suisse',
+    'Zurich Insurance', 'ABB Ltd', 'Glencore International', 'Trafigura',
+    'Mercuria Energy', 'Swiss Re', 'Richemont', 'Swatch Group',
+    'Holcim Group', 'LafargeHolcim', 'Sika AG', 'Georg Fischer', 'Schindler Group'
+  ],
+
+  industries: [
+    'Technologie', 'Finanzen', 'Gesundheitswesen', 'Bildung', 'Einzelhandel',
+    'Fertigung', 'Medien', 'Telekommunikation', 'Energie', 'Transport',
+    'Immobilien', 'Beratung', 'Gastgewerbe', 'Automobil', 'Luftfahrt'
+  ],
+
+  catchPhrases: [
+    'Innovation für die Zukunft', 'Ihr Erfolg ist unser Geschäft', 'Gemeinsam die Zukunft gestalten',
+    'Schweizer Qualität und Präzision', 'Vertrauen und Zuverlässigkeit', 'Nachhaltige Lösungen',
+    'Exzellenz in jedem Detail', 'Ihr vertrauenswürdiger Partner', 'Fortschritt durch Innovation'
+  ]
 };

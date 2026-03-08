@@ -62,5 +62,40 @@ export const hu_HU: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+36 (##) ###-####',
+    '(##) ###-####',
+    '+36 ## ###-####',
+    '## ###-####',
+    '+36 (20) ###-####',
+    '(20) ###-####',
+    '(30) ###-####',
+    '(70) ###-####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.hu', 'outlook.hu', 'hotmail.hu', 'live.hu',
+    'freemail.hu', 'citromail.hu', 'mail.hu', 'indamail.hu', 'vipmail.hu'
+  ],
+
+  companyNames: [
+    'MOL Nyrt', 'OTP Bank', 'Richter Gedeon', 'Magyar Telekom', 'MVM Zrt',
+    'FHB Bank', 'Graphisoft Park', 'Wizz Air', '4iG Nyrt', 'Masterplast',
+    'Opus Global', 'Rába Nyrt', 'Zwack Unicum', 'Pick Szeged', 'Duna Autó',
+    'CIG Pannonia', 'Budapest Bank', 'K&H Bank', 'Erste Bank Hungary'
+  ],
+
+  industries: [
+    'Technológia', 'Pénzügy', 'Egészségügy', 'Oktatás', 'Kiskereskedelem',
+    'Gyártás', 'Média', 'Távközlés', 'Energia', 'Szállítás',
+    'Ingatlan', 'Tanácsadás', 'Szálloda', 'Autóipar', 'Repülés'
+  ],
+
+  catchPhrases: [
+    'Innováció a jövőért', 'Az ön sikere a mi dolgunk', 'Közösen építjük a jövőt',
+    'Minőség és megbízhatóság', 'Kiválóság és elkötelezettség', 'Fenntartható megoldások',
+    'Értéket teremtünk', 'Az ön megbízható partnere', 'Vezetjük a változást'
+  ]
 };

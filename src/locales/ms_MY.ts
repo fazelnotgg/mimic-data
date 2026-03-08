@@ -62,5 +62,44 @@ export const ms_MY: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+60 ## ### ####',
+    '0## ### ####',
+    '+60 (0)## ### ####',
+    '01# ### ####',
+    '012 ### ####',
+    '013 ### ####',
+    '014 ### ####',
+    '016 ### ####',
+    '017 ### ####',
+    '018 ### ####',
+    '019 ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.my', 'outlook.com', 'hotmail.com', 'live.com',
+    'tm.net.my', 'maxis.com.my', 'digi.com.my', 'celcom.com.my', 'unifi.com.my'
+  ],
+
+  companyNames: [
+    'Petronas', 'Maybank', 'Public Bank', 'CIMB Group', 'Rhbank Malaysia',
+    'Tenaga Nasional', 'Petronas Dagangan', 'Axiata Group', 'Maxis Berhad',
+    'Digi.Com Berhad', 'Celcom Axiata', 'Umobile', 'AirAsia Berhad',
+    'Malaysia Airlines', 'Sime Darby', 'IOI Corporation', 'Sime Darby Plantation',
+    'Genting Berhad', 'Berjaya Group', 'YTL Corporation', 'Hong Leong Bank'
+  ],
+
+  industries: [
+    'Teknologi', 'Kewangan', 'Kesihatan', 'Pendidikan', 'Runcit',
+    'Perkilangan', 'Media', 'Telekomunikasi', 'Tenaga', 'Pengangkutan',
+    'Hartanah', 'Perundingan', 'Perhotelan', 'Automotif', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Berinovasi untuk masa depan', 'Kejayaan anda adalah urusan kami', 'Membina masa depan bersama',
+    'Kualiti dan kepercayaan', 'Kecemerlangan dan komitmen', 'Penyelesaian mampan',
+    'Mencipta nilai', 'Rakan dipercayai anda', 'Memimpin perubahan'
+  ]
 };

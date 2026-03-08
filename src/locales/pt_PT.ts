@@ -64,5 +64,41 @@ export const pt_PT: LocaleDefinition = {
     const part1 = String(Random.int(1000, 9999));
     const part2 = String(Random.int(100, 999));
     return `${part1}-${part2}`;
-  }
+  },
+
+  phoneFormats: [
+    '+351 ### ### ###',
+    '### ### ###',
+    '+351 (###) ### ###',
+    '(###) ### ###',
+    '9## ### ###',
+    '91# ### ###',
+    '92# ### ###',
+    '93# ### ###',
+    '96# ### ###'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.pt', 'outlook.pt', 'hotmail.pt', 'live.pt',
+    'sapo.pt', 'iol.pt', 'netcabo.pt', 'clix.pt', 'aeiou.pt'
+  ],
+
+  companyNames: [
+    'EDP Energias de Portugal', 'Galp Energia', 'The Navigator Company', 'Jerónimo Martins',
+    'Sonae SGPS', 'NOS SGPS', 'CTT Correios', 'Banco Comercial Português', 'Caixa Geral de Depósitos',
+    'Novo Banco', 'Banco Santander Totta', 'Fidelidade Seguros', 'TAP Air Portugal',
+    'Sumol+Compal', 'Sogrape Vinhos', 'Corticeira Amorim', 'Impresa SGPS', 'Global Match'
+  ],
+
+  industries: [
+    'Tecnologia', 'Finanças', 'Saúde', 'Educação', 'Retalho',
+    'Manufatura', 'Media', 'Telecomunicações', 'Energia', 'Transportes',
+    'Imobiliário', 'Consultoria', 'Hotelaria', 'Automóvel', 'Aeroespacial'
+  ],
+
+  catchPhrases: [
+    'Inovar para o futuro', 'O seu sucesso é o nosso negócio', 'Construir o futuro juntos',
+    'Qualidade e confiança', 'Excelência e compromisso', 'Soluções sustentáveis',
+    'Criar valor', 'O seu parceiro de confiança', 'Liderar a mudança'
+  ]
 };

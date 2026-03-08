@@ -62,5 +62,38 @@ export const es_ES: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+34 ### ## ## ##',
+    '### ## ## ##',
+    '6## ## ## ##',
+    '7## ## ## ##',
+    '9## ## ## ##',
+    '+34 6## ## ## ##'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.es', 'outlook.es', 'hotmail.es', 'terra.es',
+    'movistar.es', 'vodafone.es', 'orange.es', 'ono.com', 'wanadoo.es'
+  ],
+
+  companyNames: [
+    'Inditex SA', 'Banco Santander', 'BBVA', 'Iberdrola SA', 'Repsol SA',
+    'Telefónica SA', 'ACS Actividades', 'Iberia LAE', 'El Corte Inglés',
+    'Mercadona SA', 'Cellnex Telecom', 'Aena SME', 'Ferrovial SA',
+    'Acciona SA', 'CaixaBank', 'Sabadell', 'Mapfre SA'
+  ],
+
+  industries: [
+    'Tecnología', 'Finanzas', 'Salud', 'Educación', 'Venta minorista',
+    'Fabricación', 'Medios', 'Telecomunicaciones', 'Energía', 'Transporte',
+    'Inmobiliaria', 'Consultoría', 'Hostelería', 'Automoción', 'Aeroespacial'
+  ],
+
+  catchPhrases: [
+    'Innovando para el futuro', 'Su éxito es nuestro negocio', 'Construyendo el futuro juntos',
+    'Calidad y confianza', 'Excelencia y compromiso', 'Soluciones sostenibles',
+    'Creamos valor', 'Su socio de confianza', 'Liderando el cambio'
+  ]
 };

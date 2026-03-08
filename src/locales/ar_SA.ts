@@ -60,5 +60,42 @@ export const ar_SA: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+966 ## ### ####',
+    '0## ### ####',
+    '+966 (0)## ### ####',
+    '05# ### ####',
+    '050 ### ####',
+    '053 ### ####',
+    '054 ### ####',
+    '055 ### ####',
+    '056 ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.sa', 'outlook.com', 'hotmail.com',
+    'live.com', 'icloud.com', 'mail.com', 'protonmail.com',
+    'stc.net.sa', 'mobily.com.sa'
+  ],
+
+  companyNames: [
+    'Saudi Aramco', 'SABIC', 'Al Rajhi Bank', 'STC', 'Samba Financial Group',
+    'Riyad Bank', 'Saudi Electricity Company', 'ACWA Power', 'Maaden',
+    'Jarir Marketing', 'Abdullah Al Othaim Markets', 'Bin Dawood',
+    'Almarai Company', 'Savola Group', 'Zain KSA'
+  ],
+
+  industries: [
+    'التكنولوجيا', 'المالية', 'الرعاية الصحية', 'التعليم', 'التجزئة',
+    'التصنيع', 'الإعلام', 'الاتصالات', 'الطاقة', 'النقل',
+    'العقارات', 'الاستشارات', 'الضيافة', 'السيارات', 'الطيران'
+  ],
+
+  catchPhrases: [
+    'الابتكار للمستقبل', 'نجاحكم هو عملنا', 'نبني المستقبل معاً',
+    'الجودة والثقة', 'التميز والالتزام', 'حلول مستدامة',
+    'نخلق القيمة', 'شريككم الموثوق', 'نقود التغيير'
+  ]
 };

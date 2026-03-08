@@ -64,5 +64,39 @@ export const sv_SE: LocaleDefinition = {
     const part1 = String(Random.int(100, 999));
     const part2 = String(Random.int(10, 99));
     return `${part1} ${part2}`;
-  }
+  },
+
+  phoneFormats: [
+    '+46 (0)# ### ###',
+    '0# ### ###',
+    '+46 (0)## ### ###',
+    '0## ### ###',
+    '+46 (0)### ### ##',
+    '0### ### ##',
+    '07# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.se', 'outlook.com', 'hotmail.com', 'live.se',
+    'telia.com', 'comhem.se', 'bredband.net', 'swipnet.se', 'spray.se'
+  ],
+
+  companyNames: [
+    'Volvo AB', 'Ericsson', 'IKEA', 'H&M Hennes & Mauritz', 'Electrolux',
+    'Atlas Copco', 'Sandvik AB', 'SKF AB', 'Scania AB', 'AstraZeneca',
+    'SEB AB', 'Swedbank', 'Handelsbanken', 'Nordea', 'Telia Company',
+    'Investor AB', 'Husqvarna AB', 'ABB AB', 'Tetra Pak', 'Spotify AB'
+  ],
+
+  industries: [
+    'Teknik', 'Finans', 'Hälsovård', 'Utbildning', 'Detaljhandel',
+    'Tillverkning', 'Media', 'Telekom', 'Energi', 'Transport',
+    'Fastigheter', 'Konsult', 'Hotell', 'Automotive', 'Flyg'
+  ],
+
+  catchPhrases: [
+    'Innovativt för framtiden', 'Er framgång är vårt affär', 'Bygger framtiden tillsammans',
+    'Kvalitet och förtroende', 'Excellens och engagemang', 'Hållbara lösningar',
+    'Skapar värde', 'Er pålitliga partner', 'Leder förändring'
+  ]
 };

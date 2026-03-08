@@ -59,5 +59,38 @@ export const nb_NO: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+47 ### ## ###',
+    '### ## ###',
+    '+47 ## ## ## ##',
+    '## ## ## ##',
+    '4## ## ###',
+    '9## ## ###'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.no', 'outlook.no', 'hotmail.no', 'live.no',
+    'online.no', 'home.no', 'getmail.no', 'broadpark.no', 'icloud.com'
+  ],
+
+  companyNames: [
+    'Equinor ASA', 'DNB ASA', 'Telenor ASA', 'Yara International', 'Norsk Hydro',
+    'Orkla ASA', 'Kongsberg Gruppen', 'Aker ASA', 'Mowi ASA', 'Lerøy Seafood',
+    'SalMar ASA', 'Gjensidige Forsikring', 'Storebrand', 'Wilh. Wilhelmsen',
+    'Frontline Ltd', 'Golden Ocean', 'Aker BP', 'Vår Energi', 'Höegh Autoliners'
+  ],
+
+  industries: [
+    'Teknologi', 'Finans', 'Helsevesen', 'Utdanning', 'Detaljhandel',
+    'Produksjon', 'Media', 'Telekom', 'Energi', 'Transport',
+    'Eiendom', 'Konsulent', 'Hoteller', 'Bilindustri', 'Luftfart'
+  ],
+
+  catchPhrases: [
+    'Innovasjon for fremtiden', 'Din suksess er vår sak', 'Bygger fremtiden sammen',
+    'Kvalitet og tillit', 'Fortreffelighet og engasjement', 'Bærekraftige løsninger',
+    'Skaper verdi', 'Din pålitelige partner', 'Leder endring'
+  ]
 };

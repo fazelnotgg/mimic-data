@@ -61,5 +61,43 @@ export const th_TH: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+66 # #### ####',
+    '0# #### ####',
+    '+66 (0)# #### ####',
+    '08# ### ####',
+    '09# ### ####',
+    '06# ### ####',
+    '02 ### ####',
+    '03# ### ####',
+    '04# ### ####',
+    '05# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.co.th', 'outlook.co.th', 'hotmail.co.th', 'live.co.th',
+    'hotmail.com', 'yahoo.com', 'thaimail.com', 'mailthai.com', 'sanook.com'
+  ],
+
+  companyNames: [
+    'PTT Public Company', 'Bangkok Bank', 'Kasikornbank', 'Siam Commercial Bank',
+    'Krung Thai Bank', 'Bank of Ayudhya', 'TMB Bank', 'Thanachart Bank',
+    'Advanced Info Service', 'True Corporation', 'DTAC', 'TOT Public Company',
+    'Thai Airways International', 'Bangkok Airways', 'AirAsia Thailand',
+    'Central Group', 'The Mall Group', 'Siam Piwat', 'Major Cineclic Group'
+  ],
+
+  industries: [
+    'เทคโนโลยี', 'การเงิน', 'การดูแลสุขภาพ', 'การศึกษา', 'การขายปลีก',
+    'การผลิต', 'สื่อ', 'โทรคมนาคม', 'พลังงาน', 'การขนส่ง',
+    'อสังหาริมทรัพย์', 'ที่ปรึกษา', 'โรงแรม', 'ยานยนต์', 'การบิน'
+  ],
+
+  catchPhrases: [
+    'นวัตกรรมเพื่ออนาคต', 'ความสำเร็จของคุณคือธุรกิจของเรา', 'สร้างอนาคตร่วมกัน',
+    'คุณภาพและความไว้วางใจ', 'ความเป็นเลิศและความมุ่งมั่น', 'โซลูชันที่ยั่งยืน',
+    'สร้างคุณค่า', 'พันธมิตรที่ไว้วางใจได้', 'นำไปสู่การเปลี่ยนแปลง'
+  ]
 };

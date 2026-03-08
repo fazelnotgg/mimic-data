@@ -63,5 +63,39 @@ export const en_CA: LocaleDefinition = {
     const letters = 'ABCDEFGHJKLMNPRSTVWXYZ';
     const digits = '0123456789';
     return `${letters[Random.int(0, letters.length - 1)]}${digits[Random.int(0, 9)]}${letters[Random.int(0, letters.length - 1)]} ${digits[Random.int(0, 9)]}${letters[Random.int(0, letters.length - 1)]}${digits[Random.int(0, 9)]}`;
-  }
+  },
+
+  phoneFormats: [
+    '+1 (###) ###-####',
+    '(###) ###-####',
+    '###-###-####',
+    '###.###.####',
+    '+1 ### ###-####',
+    '1 (###) ###-####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.ca', 'outlook.com', 'hotmail.com', 'live.ca',
+    'sympatico.ca', 'rogers.com', 'shaw.ca', 'telus.net', 'bell.net'
+  ],
+
+  companyNames: [
+    'Royal Bank of Canada', 'Toronto-Dominion Bank', 'Enbridge Inc', 'Canadian National Railway',
+    'Bank of Nova Scotia', 'Bank of Montreal', 'Canadian Imperial Bank', 'Suncor Energy',
+    'Canadian Natural Resources', 'BCE Inc', 'Telus Corporation', 'Rogers Communications',
+    'George Weston Limited', 'Loblaw Companies', 'Empire Company', 'Metro Inc',
+    'Air Canada', 'Canadian Pacific Railway', 'Barrick Gold', 'Agnico Eagle Mines'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

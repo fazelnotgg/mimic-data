@@ -61,5 +61,45 @@ export const en_NZ: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+64 # ### ####',
+    '0# ### ####',
+    '+64 (0)# ### ####',
+    '02# ### ####',
+    '021 ### ####',
+    '022 ### ####',
+    '027 ### ####',
+    '03 ### ####',
+    '04 ### ####',
+    '06 ### ####',
+    '07 ### ####',
+    '09 ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.co.nz', 'outlook.co.nz', 'hotmail.co.nz', 'live.co.nz',
+    'xtra.co.nz', 'vodafone.co.nz', 'slingshot.co.nz', 'orcon.net.nz', 'ihug.co.nz'
+  ],
+
+  companyNames: [
+    'Air New Zealand', 'Fisher & Paykel Healthcare', 'Contact Energy', 'Meridian Energy',
+    'Spark New Zealand', 'Vector Limited', 'Infratil Limited', 'Kathmandu Holdings',
+    'The Warehouse Group', 'Foodstuffs North Island', 'Foodstuffs South Island',
+    'ANZ Bank New Zealand', 'ASB Bank', 'BNZ Bank', 'Westpac New Zealand',
+    'Fletcher Building', 'Goodman Property Trust', 'Kiwi Property Group', 'Z Energy'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

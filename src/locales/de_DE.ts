@@ -75,5 +75,36 @@ export const de_DE: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+49 (###) #######',
+    '0### ########',
+    '0#### #######',
+    '+49 (0)### ########',
+    '01## #######'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'web.de', 'gmx.de', 't-online.de', 'yahoo.de',
+    'hotmail.de', 'outlook.de', 'mail.de', 'freenet.de', '1und1.de'
+  ],
+
+  companyNames: [
+    'Volkswagen AG', 'Siemens AG', 'BMW AG', 'Mercedes-Benz AG', 'Bosch GmbH',
+    'SAP SE', 'Deutsche Bank AG', 'Allianz SE', 'BASF SE', 'Adidas AG',
+    'Deutsche Telekom AG', 'Audi AG', 'Deutsche Post AG', 'Bayer AG', 'Henkel AG'
+  ],
+
+  industries: [
+    'Technologie', 'Finanzen', 'Gesundheitswesen', 'Bildung', 'Einzelhandel',
+    'Fertigung', 'Medien', 'Telekommunikation', 'Energie', 'Transport',
+    'Immobilien', 'Beratung', 'Gastgewerbe', 'Automobil', 'Luftfahrt'
+  ],
+
+  catchPhrases: [
+    'Innovation für die Zukunft', 'Ihr Erfolg ist unser Geschäft', 'Gemeinsam die Zukunft gestalten',
+    'Qualität made in Germany', 'Vertrauen und Kompetenz', 'Exzellenz in jedem Detail',
+    'Nachhaltig und zuverlässig', 'Präzision und Innovation', 'Ihr Partner für Wachstum'
+  ]
 };

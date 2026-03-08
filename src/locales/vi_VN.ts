@@ -62,5 +62,43 @@ export const vi_VN: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(100000, 999999));
-  }
+  },
+
+  phoneFormats: [
+    '+84 ## ### ####',
+    '0## ### ####',
+    '+84 (0)## ### ####',
+    '09# ### ####',
+    '03# ### ####',
+    '05# ### ####',
+    '07# ### ####',
+    '08# ### ####',
+    '02# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.vn', 'outlook.com', 'hotmail.com', 'live.com',
+    'yahoo.com', 'vnn.vn', 'hcm.vnn.vn', 'hn.vnn.vn', 'viettel.vn',
+    'vnnic.net.vn', 'fpt.vn', 'vtc.vn'
+  ],
+
+  companyNames: [
+    'Tập đoàn Vingroup', 'Tập đoàn Viettel', 'Tập đoàn FPT', 'Vietnam Oil and Gas Group',
+    'Ngân hàng Vietcombank', 'Ngân hàng BIDV', 'Ngân hàng VietinBank', 'Ngân hàng Techcombank',
+    'Vietnam Airlines', 'VietJet Air', 'Bamboo Airways', 'Tập đoàn TH',
+    'Tập đoàn Masan', 'Tập đoàn Vinamilk', 'Tập đoàn Hòa Phát', 'Tập đoàn Sun Group',
+    'Tập đoàn Novaland', 'Tập đoàn FLC', 'Tập đoàn T&T Group'
+  ],
+
+  industries: [
+    'Công nghệ', 'Tài chính', 'Y tế', 'Giáo dục', 'Bán lẻ',
+    'Sản xuất', 'Truyền thông', 'Viễn thông', 'Năng lượng', 'Giao thông',
+    'Bất động sản', 'Tư vấn', 'Khách sạn', 'Ô tô', 'Hàng không'
+  ],
+
+  catchPhrases: [
+    'Đổi mới cho tương lai', 'Thành công của bạn là công việc của chúng tôi', 'Xây dựng tương lai cùng nhau',
+    'Chất lượng và niềm tin', 'Xuất sắc và cam kết', 'Giải pháp bền vững',
+    'Tạo ra giá trị', 'Đối tác đáng tin cậy của bạn', 'Dẫn đầu sự thay đổi'
+  ]
 };

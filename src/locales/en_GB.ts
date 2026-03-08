@@ -65,5 +65,40 @@ export const en_GB: LocaleDefinition = {
     const sector = Random.int(0, 9);
     const unit = letters[Random.int(0, letters.length - 1)] + letters[Random.int(0, letters.length - 1)];
     return `${area}${district} ${sector}${unit}`;
-  }
+  },
+
+  phoneFormats: [
+    '+44 ## #### ####',
+    '0## #### ####',
+    '+44 (0)## #### ####',
+    '07### ######',
+    '07### ### ###',
+    '020 #### ####',
+    '01### ######',
+    '01### ### ###'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.co.uk', 'outlook.co.uk', 'hotmail.co.uk', 'live.co.uk',
+    'btinternet.com', 'sky.com', 'talktalk.net', 'virginmedia.com', 'aol.co.uk'
+  ],
+
+  companyNames: [
+    'HSBC Holdings', 'BP plc', 'Shell plc', 'AstraZeneca', 'GlaxoSmithKline',
+    'Unilever PLC', 'Diageo plc', 'British American Tobacco', 'Rio Tinto Group',
+    'Barclays PLC', 'Lloyds Banking Group', 'NatWest Group', 'Vodafone Group',
+    'BT Group', 'Tesco PLC', 'Sainsbury\'s', 'Marks & Spencer', 'Rolls-Royce Holdings'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

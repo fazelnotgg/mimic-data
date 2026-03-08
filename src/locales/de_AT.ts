@@ -60,5 +60,42 @@ export const de_AT: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+43 (0)# #######',
+    '0# #######',
+    '+43 (0)## #######',
+    '0## #######',
+    '+43 (0)### ######',
+    '0### ######',
+    '06## ######',
+    '06## #######',
+    '067# #######',
+    '068# #######'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.at', 'outlook.at', 'hotmail.at', 'live.at',
+    'aon.at', 'gmx.at', 'chello.at', 'inode.at', 'utanet.at'
+  ],
+
+  companyNames: [
+    'OMV AG', 'Erste Group Bank', 'Raiffeisen Bank', 'Vienna Insurance Group',
+    'Red Bull GmbH', 'Swarovski', 'Voestalpine', 'Andritz AG', 'Verbund AG',
+    'Austrian Airlines', 'Magna International', 'Lenzing AG', 'Porsche Holding',
+    'Spar Österreich', 'Rewe International', 'Hofer KG', 'Billa AG'
+  ],
+
+  industries: [
+    'Technologie', 'Finanzen', 'Gesundheitswesen', 'Bildung', 'Einzelhandel',
+    'Fertigung', 'Medien', 'Telekommunikation', 'Energie', 'Transport',
+    'Immobilien', 'Beratung', 'Gastgewerbe', 'Automobil', 'Luftfahrt'
+  ],
+
+  catchPhrases: [
+    'Innovation für die Zukunft', 'Ihr Erfolg ist unser Geschäft', 'Gemeinsam die Zukunft gestalten',
+    'Qualität und Vertrauen', 'Exzellenz und Engagement', 'Nachhaltige Lösungen',
+    'Wert schaffen', 'Ihr verlässlicher Partner', 'Veränderung vorantreiben'
+  ]
 };

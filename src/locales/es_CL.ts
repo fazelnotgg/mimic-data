@@ -61,5 +61,41 @@ export const es_CL: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000000, 9999999));
-  }
+  },
+
+  phoneFormats: [
+    '+56 9 #### ####',
+    '9 #### ####',
+    '+56 (9) #### ####',
+    '(9) #### ####',
+    '02 #### ####',
+    '032 #### ####',
+    '041 #### ####',
+    '055 #### ####',
+    '061 #### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.cl', 'outlook.cl', 'hotmail.cl', 'live.cl',
+    'vtr.net', 'movistar.cl', 'entel.cl', 'claro.cl', 'telsur.cl'
+  ],
+
+  companyNames: [
+    'Sociedad Química y Minera', 'Banco de Chile', 'Banco Santander Chile', 'Banco Estado',
+    'Latam Airlines', 'Falabella SA', 'Cencosud SA', 'Ripley Corp', 'Parque Arauco',
+    'Mallplaza', 'Empresas Copec', 'Colbún SA', 'Enel Chile', 'Enel Distribución',
+    'Chilectra', 'Aguas Andinas', 'CCU Compañía de las Cervecerías Unidas', 'Viña Concha y Toro'
+  ],
+
+  industries: [
+    'Tecnología', 'Finanzas', 'Salud', 'Educación', 'Venta minorista',
+    'Fabricación', 'Medios', 'Telecomunicaciones', 'Energía', 'Transporte',
+    'Inmobiliaria', 'Consultoría', 'Hostelería', 'Automoción', 'Aeroespacial'
+  ],
+
+  catchPhrases: [
+    'Innovando para el futuro', 'Su éxito es nuestro negocio', 'Construyendo el futuro juntos',
+    'Calidad y confianza', 'Excelencia y compromiso', 'Soluciones sostenibles',
+    'Creamos valor', 'Su socio de confianza', 'Liderando el cambio'
+  ]
 };

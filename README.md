@@ -100,13 +100,59 @@ console.log(mimic.location.fullAddress());
 - `en_NZ` / `nz` / `new-zealand` - 🇳🇿 New Zealand (metric)
 - `he_IL` / `he` / `il` / `israel` - 🇮🇱 Israel (metric)
 
-### Middle East & Africa 🌍 (6)
+### Middle East & Africa 🌍 (10)
 - `ar_AE` / `ae` / `uae` / `emirates` - 🇦🇪 UAE (metric)
 - `ar_SA` / `sa` / `saudi` / `saudi-arabia` - 🇸🇦 Saudi Arabia (metric)
 - `ar_EG` / `eg` / `egypt` - 🇪🇬 Egypt (metric)
 - `en_ZA` / `za` / `south-africa` - 🇿🇦 South Africa (metric)
+- `ng_NG` / `ng` / `nigeria` - 🇳🇬 Nigeria (metric)
+- `ke_KE` / `ke` / `kenya` - 🇰🇪 Kenya (metric)
+- `pk_PK` / `pk` / `pakistan` - 🇵🇰 Pakistan (metric)
+- `bd_BD` / `bd` / `bangladesh` - 🇧🇩 Bangladesh (metric)
+- `ir_IR` / `ir` / `iran` - 🇮🇷 Iran (metric)
+- `ma_MA` / `ma` / `morocco` - 🇲🇦 Morocco (metric)
 
-**Total: 44 Locales dengan 120+ Aliases!**
+### Eastern Europe 🌍 (9)
+- `uk_UA` / `ua` / `ukraine` - 🇺🇦 Ukraine (metric)
+- `sk_SK` / `sk` / `slovakia` - 🇸🇰 Slovakia (metric)
+- `hr_HR` / `hr` / `croatia` - 🇭🇷 Croatia (metric)
+- `rs_RS` / `rs` / `serbia` - 🇷🇸 Serbia (metric)
+- `lt_LT` / `lt` / `lithuania` - 🇱🇹 Lithuania (metric)
+- `lv_LV` / `lv` / `latvia` - 🇱🇻 Latvia (metric)
+- `et_EE` / `ee` / `estonia` - 🇪🇪 Estonia (metric)
+- `bg_BG` / `bg` / `bulgaria` - 🇧🇬 Bulgaria (metric)
+- `is_IS` / `is` / `iceland` - 🇮🇸 Iceland (metric)
+
+### Americas 🌎 (11)
+- `en_US` / `en` / `us` / `usa` - 🇺🇸 USA (imperial)
+- `en_CA` / `ca` / `canada` - 🇨🇦 Canada (metric)
+- `es_MX` / `mx` / `mexico` - 🇲🇽 Mexico (metric)
+- `pt_BR` / `pt` / `br` / `brazil` - 🇧🇷 Brazil (metric)
+- `es_AR` / `ar` / `argentina` - 🇦🇷 Argentina (metric)
+- `es_CL` / `cl` / `chile` - 🇨🇱 Chile (metric)
+- `co_CO` / `co` / `colombia` - 🇨🇴 Colombia (metric)
+- `pe_PE` / `pe` / `peru` - 🇵🇪 Peru (metric)
+- `ve_VE` / `ve` / `venezuela` - 🇻🇪 Venezuela (metric)
+- `gt_GT` / `gt` / `guatemala` - 🇬🇹 Guatemala (metric)
+- `cr_CR` / `cr` / `costa-rica` - 🇨🇷 Costa Rica (metric)
+
+### Asia-Pacific 🌏 (14)
+- `zh_CN` / `zh` / `cn` / `china` - 🇨🇳 China (metric)
+- `ja_JP` / `ja` / `jp` / `japan` - 🇯🇵 Japan (metric)
+- `ko_KR` / `ko` / `kr` / `korea` - 🇰🇷 South Korea (metric)
+- `en_IN` / `in` / `india` - 🇮🇳 India (metric)
+- `id_ID` / `id` / `indonesia` - 🇮🇩 Indonesia (metric)
+- `th_TH` / `th` / `thailand` - 🇹🇭 Thailand (metric)
+- `vi_VN` / `vi` / `vn` / `vietnam` - 🇻🇳 Vietnam (metric)
+- `ms_MY` / `ms` / `my` / `malaysia` - 🇲🇾 Malaysia (metric)
+- `en_SG` / `sg` / `singapore` - 🇸🇬 Singapore (metric)
+- `en_PH` / `ph` / `philippines` - 🇵🇭 Philippines (metric)
+- `en_AU` / `au` / `aus` / `australia` - 🇦🇺 Australia (metric)
+- `en_NZ` / `nz` / `new-zealand` - 🇳🇿 New Zealand (metric)
+- `he_IL` / `he` / `il` / `israel` - 🇮🇱 Israel (metric)
+- `tw_TW` / `tw` / `taiwan` - 🇹🇼 Taiwan (metric)
+
+**Total: 65 Locales dengan 180+ Aliases!**
 
 ## 📚 API Reference
 
@@ -134,7 +180,7 @@ mimic.identity.age();                // 18-65 (default)
 mimic.identity.age({ min: 25, max: 40 }); // Custom range
 
 // Tanggal lahir
-mimic.identity.dateOfBirth();        
+mimic.identity.dateOfBirth();
 mimic.identity.dateOfBirth({ min: 30, max: 50 });
 
 // Generate semua data person sekaligus
@@ -147,6 +193,12 @@ const person = mimic.identity.person('female', { min: 25, max: 35 });
 //   age: 28,
 //   dateOfBirth: Date
 // }
+
+// 🚀 NEW: Generate multiple persons at once
+const persons = mimic.identity.persons(10); // Array of 10 persons
+
+// 🚀 NEW: Generate unique persons (no duplicate full names)
+const uniquePersons = mimic.identity.uniquePersons(5);
 ```
 
 ### Location (Lokasi)
@@ -173,6 +225,12 @@ const address = mimic.location.address();
 //   zipCode: "123-4567",
 //   fullAddress: "〒123-4567 Tokyo, Yokohama, Chuo-dori 2-5-10"
 // }
+
+// 🚀 NEW: Generate multiple addresses at once
+const addresses = mimic.location.addresses(10); // Array of 10 addresses
+
+// 🚀 NEW: Generate unique addresses (no duplicate full addresses)
+const uniqueAddresses = mimic.location.uniqueAddresses(5);
 ```
 
 ### Physical (Data Fisik)
@@ -192,6 +250,9 @@ mimic.physical.weight();
 const physical = mimic.physical.data();
 // Metric: { height: 175, weight: 70, heightUnit: 'cm', weightUnit: 'kg' }
 // Imperial: { height: 5.9, weight: 154, heightUnit: 'ft', weightUnit: 'lb' }
+
+// 🚀 NEW: Generate multiple physical data at once
+const physicals = mimic.physical.datas(10); // Array of 10 physical data
 ```
 
 ### Work (Data Pekerjaan)
@@ -206,6 +267,69 @@ const work = mimic.work.data();
 //   jobTitle: "Software Engineer",
 //   department: "Engineering"
 // }
+
+// 🚀 NEW: Generate multiple work data at once
+const works = mimic.work.datas(10); // Array of 10 work data
+
+// 🚀 NEW: Generate unique job titles
+const uniqueJobTitles = mimic.work.uniqueJobTitles(5);
+
+// 🚀 NEW: Generate unique departments
+const uniqueDepartments = mimic.work.uniqueDepartments(3);
+```
+
+### Contact (Kontak) - NEW! 📧
+
+```typescript
+// Generate email
+mimic.contact.email('John', 'Doe');  // "john.doe123@gmail.com"
+mimic.contact.email('Jane');         // "jane456@yahoo.com"
+mimic.contact.email();               // "random789@outlook.com"
+
+// Generate phone number (locale-specific format)
+mimic.contact.phone();  // US: "+1 (555) 123-4567"
+                        // ID: "+62 812-3456-7890"
+
+// Generate website
+mimic.contact.website();        // "www.acme-corp.com"
+mimic.contact.website('Google');// "www.google.com"
+
+// Generate complete contact data
+const contact = mimic.contact.data('John', 'Doe');
+// {
+//   email: "john.doe123@gmail.com",
+//   phone: "+1 (555) 123-4567",
+//   website: "www.john-doe.com"
+// }
+
+// 🚀 Generate multiple contact data
+const contacts = mimic.contact.datas(10);
+```
+
+### Company (Perusahaan) - NEW! 🏢
+
+```typescript
+// Generate company name
+mimic.company.name();  // "Techflow Solutions"
+                       // "PT Telkom Indonesia" (id_ID)
+
+// Generate industry
+mimic.company.industry();  // "Technology"
+                           // "Teknologi" (id_ID)
+
+// Generate catch phrase
+mimic.company.catchPhrase();  // "Empower innovative solutions"
+
+// Generate complete company data
+const company = mimic.company.data();
+// {
+//   name: "Quantumspark Labs",
+//   industry: "Technology",
+//   catchPhrase: "Transform cutting-edge experiences"
+// }
+
+// 🚀 Generate multiple company data
+const companies = mimic.company.datas(10);
 ```
 
 ### Mengganti Locale
@@ -218,10 +342,93 @@ mimic.setLocale(locales.ja_JP);
 console.log(mimic.identity.fullName()); // "Tanaka Kenji"
 ```
 
+## 🚀 Fitur Baru (v1.1.0)
+
+### 🔁 Seeded Random (Reproducible Data)
+
+Generate data yang sama secara konsisten untuk testing:
+
+```typescript
+import { createMimic, Random } from 'mimic-data';
+
+// Set seed untuk reproducible randomness
+Random.seed(12345);
+
+const mimic = createMimic('en_US');
+const person1 = mimic.identity.person('male', { min: 25, max: 35 });
+
+// Reset seed yang sama
+Random.seed(12345);
+const person2 = mimic.identity.person('male', { min: 25, max: 35 });
+
+// person1 dan person2 akan IDENTIK!
+console.log(person1.fullName === person2.fullName); // true
+console.log(person1.age === person2.age); // true
+
+// Reset ke random non-deterministik
+Random.unseed();
+```
+
+### 📦 Bulk Generation
+
+Generate banyak data sekaligus dengan performa optimal:
+
+```typescript
+import { createMimic } from 'mimic-data';
+
+const mimic = createMimic('id_ID');
+
+// Generate 100 persons sekaligus
+const persons = mimic.identity.persons(100);
+
+// Generate 50 unique addresses (no duplicates)
+const addresses = mimic.location.uniqueAddresses(50);
+
+// Generate 200 complete mock entities
+const entities = mimic.generateMockEntities(200, {
+  gender: 'female',
+  ageRange: { min: 20, max: 40 }
+});
+
+// Generate unique mock entities
+const uniqueEntities = mimic.generateUniqueMockEntities(100);
+```
+
+### 🎯 Random Utilities
+
+```typescript
+import { Random } from 'mimic-data';
+
+// Generate multiple values
+const numbers = Random.multiple(() => Random.int(1, 100), 10);
+
+// Generate unique values (no duplicates)
+const uniqueNumbers = Random.unique(() => Random.int(1, 1000), 20);
+
+// Shuffle array
+const shuffled = Random.shuffle([1, 2, 3, 4, 5]);
+
+// Pick random element
+const randomItem = Random.pick(['apple', 'banana', 'cherry']);
+```
+
+### ⚡ Performance Improvements
+
+- **Caching**: Generator methods di-cache untuk performa lebih cepat
+- **Bulk Operations**: Generate banyak data dalam satu panggilan
+- **Optimized Getters**: Tidak ada recreation pada setiap akses
+
+```typescript
+// Getter methods sekarang di-cache (lebih cepat)
+const identity1 = mimic.identity;
+const identity2 = mimic.identity;
+console.log(identity1 === identity2); // true (same cached instance)
+```
+
 ## 🎯 Contoh Lengkap
 
 ```typescript
-import { createMimic } from 'mimic-real-data';
+import { createMimic } from 'mimic-data';
 
 // Generate data karyawan Indonesia
 const mimic = createMimic('id_ID');

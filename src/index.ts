@@ -51,6 +51,35 @@ import { ar_SA } from './locales/ar_SA';
 import { ar_EG } from './locales/ar_EG';
 import { he_IL } from './locales/he_IL';
 
+// Import new locales - Eastern Europe
+import { uk_UA } from './locales/uk_UA';
+import { sk_SK } from './locales/sk_SK';
+import { hr_HR } from './locales/hr_HR';
+import { rs_RS } from './locales/rs_RS';
+import { lt_LT } from './locales/lt_LT';
+import { lv_LV } from './locales/lv_LV';
+import { et_EE } from './locales/et_EE';
+import { bg_BG } from './locales/bg_BG';
+import { is_IS } from './locales/is_IS';
+
+// Import new locales - Africa & Middle East
+import { ng_NG } from './locales/ng_NG';
+import { ke_KE } from './locales/ke_KE';
+import { pk_PK } from './locales/pk_PK';
+import { bd_BD } from './locales/bd_BD';
+import { ir_IR } from './locales/ir_IR';
+import { ma_MA } from './locales/ma_MA';
+
+// Import new locales - Americas
+import { co_CO } from './locales/co_CO';
+import { pe_PE } from './locales/pe_PE';
+import { ve_VE } from './locales/ve_VE';
+import { gt_GT } from './locales/gt_GT';
+import { cr_CR } from './locales/cr_CR';
+
+// Import new locales - Asia
+import { tw_TW } from './locales/tw_TW';
+
 // Export types
 export type {
   Gender,
@@ -126,6 +155,35 @@ localeRegistry.register('ar_SA', ar_SA, ['sa', 'saudi', 'saudi-arabia']);
 localeRegistry.register('ar_EG', ar_EG, ['eg', 'egypt']);
 localeRegistry.register('he_IL', he_IL, ['he', 'il', 'israel']);
 
+// Eastern Europe locales
+localeRegistry.register('uk_UA', uk_UA, ['ua', 'ukraine']);
+localeRegistry.register('sk_SK', sk_SK, ['sk', 'slovakia']);
+localeRegistry.register('hr_HR', hr_HR, ['hr', 'croatia']);
+localeRegistry.register('rs_RS', rs_RS, ['rs', 'serbia']);
+localeRegistry.register('lt_LT', lt_LT, ['lt', 'lithuania']);
+localeRegistry.register('lv_LV', lv_LV, ['lv', 'latvia']);
+localeRegistry.register('et_EE', et_EE, ['ee', 'estonia']);
+localeRegistry.register('bg_BG', bg_BG, ['bg', 'bulgaria']);
+localeRegistry.register('is_IS', is_IS, ['is', 'iceland']);
+
+// Africa & Middle East locales
+localeRegistry.register('ng_NG', ng_NG, ['ng', 'nigeria']);
+localeRegistry.register('ke_KE', ke_KE, ['ke', 'kenya']);
+localeRegistry.register('pk_PK', pk_PK, ['pk', 'pakistan']);
+localeRegistry.register('bd_BD', bd_BD, ['bd', 'bangladesh']);
+localeRegistry.register('ir_IR', ir_IR, ['ir', 'iran']);
+localeRegistry.register('ma_MA', ma_MA, ['ma', 'morocco']);
+
+// Americas locales
+localeRegistry.register('co_CO', co_CO, ['co', 'colombia']);
+localeRegistry.register('pe_PE', pe_PE, ['pe', 'peru']);
+localeRegistry.register('ve_VE', ve_VE, ['ve', 'venezuela']);
+localeRegistry.register('gt_GT', gt_GT, ['gt', 'guatemala']);
+localeRegistry.register('cr_CR', cr_CR, ['cr', 'costa-rica']);
+
+// Asia locales
+localeRegistry.register('tw_TW', tw_TW, ['tw', 'taiwan']);
+
 /**
  * Factory function to create Mimic instance with specified locale
  */
@@ -161,7 +219,7 @@ export function getAllLocaleCodes(): string[] {
  * Export all locale definitions for advanced usage
  */
 export const locales = {
-  // Original
+  // Original 8
   en_US, ja_JP, id_ID, de_DE, fr_FR, pt_BR, ko_KR, en_AU,
   // New (20)
   zh_CN, en_IN, es_MX, it_IT, es_ES, nl_NL, en_CA, en_GB,
@@ -169,7 +227,15 @@ export const locales = {
   es_AR, es_CL, th_TH, vi_VN, ms_MY,
   // Newest (16)
   en_SG, en_PH, en_NZ, en_ZA, pt_PT, el_GR, cs_CZ, de_AT,
-  de_CH, nl_BE, hu_HU, ro_RO, ar_AE, ar_SA, ar_EG, he_IL
+  de_CH, nl_BE, hu_HU, ro_RO, ar_AE, ar_SA, ar_EG, he_IL,
+  // Eastern Europe (9)
+  uk_UA, sk_SK, hr_HR, rs_RS, lt_LT, lv_LV, et_EE, bg_BG, is_IS,
+  // Africa & Middle East (6)
+  ng_NG, ke_KE, pk_PK, bd_BD, ir_IR, ma_MA,
+  // Americas (5)
+  co_CO, pe_PE, ve_VE, gt_GT, cr_CR,
+  // Asia (1)
+  tw_TW
 };
 
 // Default export

@@ -60,5 +60,39 @@ export const nl_BE: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+32 # ### ## ##',
+    '0# ### ## ##',
+    '+32 (0)# ### ## ##',
+    '04## ## ## ##',
+    '047# ## ## ##',
+    '048# ## ## ##',
+    '049# ## ## ##'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.be', 'outlook.be', 'hotmail.be', 'live.be',
+    'telenet.be', 'proximus.be', 'skynet.be', 'pandora.be', 'belgacom.net'
+  ],
+
+  companyNames: [
+    'Anheuser-Busch InBev', 'KBC Group', 'Belfius Bank', 'Ageas SA', 'Umicore SA',
+    'Solvay SA', 'Groupe Bruxelles Lambert', 'Ackermans & van Haaren', 'Colruyt NV',
+    'Delhaize Group', 'Galeria Inno', 'Telenet Group', 'Proximus', 'bpost',
+    'Brussels Airlines', 'Cofinimmo', 'Warehouses De Pauw', 'Aperam SA'
+  ],
+
+  industries: [
+    'Technologie', 'Financiën', 'Gezondheidszorg', 'Onderwijs', 'Detailhandel',
+    'Productie', 'Media', 'Telecommunicatie', 'Energie', 'Transport',
+    'Onroerend goed', 'Consultancy', 'Horeca', 'Automotive', 'Luchtvaart'
+  ],
+
+  catchPhrases: [
+    'Innoveren voor de toekomst', 'Uw succes is onze zaak', 'Samen de toekomst bouwen',
+    'Kwaliteit en vertrouwen', 'Uitstekendheid en toewijding', 'Duurzame oplossingen',
+    'Waarde creëren', 'Uw vertrouwde partner', 'Verandering leiden'
+  ]
 };

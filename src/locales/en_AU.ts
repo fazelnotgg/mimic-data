@@ -73,5 +73,41 @@ export const en_AU: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+61 # #### ####',
+    '0# #### ####',
+    '+61 (0)# #### ####',
+    '04## ### ###',
+    '04## ### ###',
+    '02 #### ####',
+    '03 #### ####',
+    '07 #### ####',
+    '08 #### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.au', 'outlook.com.au', 'hotmail.com', 'live.com.au',
+    'bigpond.com', 'optusnet.com.au', 'tpg.com.au', 'iinet.net.au', 'internode.on.net'
+  ],
+
+  companyNames: [
+    'Commonwealth Bank', 'BHP Group', 'CSL Limited', 'Westpac Banking', 'ANZ Group',
+    'National Australia Bank', 'Wesfarmers', 'Woolworths Group', 'Telstra Corporation',
+    'Macquarie Group', 'Rio Tinto Australia', 'Fortescue Metals', 'Woodside Energy',
+    'Qantas Airways', 'Transurban Group', 'Goodman Group', 'Atlassian Corporation'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

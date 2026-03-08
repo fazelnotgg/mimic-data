@@ -61,5 +61,46 @@ export const en_PH: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+63 ### ### ####',
+    '0### ### ####',
+    '+63 (0)### ### ####',
+    '09## ### ####',
+    '091# ### ####',
+    '092# ### ####',
+    '093# ### ####',
+    '094# ### ####',
+    '095# ### ####',
+    '096# ### ####',
+    '097# ### ####',
+    '098# ### ####',
+    '099# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.ph', 'outlook.com', 'hotmail.com', 'live.com',
+    'yahoo.com', 'pldtdsl.net', 'globe.com.ph', 'smart.com.ph', 'sun.com.ph'
+  ],
+
+  companyNames: [
+    'SM Investments Corporation', 'Ayala Corporation', 'JG Summit Holdings', 'Metro Pacific Investments',
+    'BDO Unibank', 'Bank of the Philippine Islands', 'Metropolitan Bank & Trust', 'Philippine National Bank',
+    'PLDT Inc', 'Globe Telecom', 'Philippine Long Distance Telephone', 'Jollibee Foods Corporation',
+    'SM Prime Holdings', 'Ayala Land Inc', 'Megaworld Corporation', 'Robinsons Land Corporation',
+    'Cebu Pacific Air', 'Philippine Airlines', 'Manila Electric Company', 'Aboitiz Power Corporation'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

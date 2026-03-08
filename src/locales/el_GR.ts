@@ -61,5 +61,39 @@ export const el_GR: LocaleDefinition = {
     const part1 = String(Random.int(100, 999));
     const part2 = String(Random.int(10, 99));
     return `${part1} ${part2}`;
-  }
+  },
+
+  phoneFormats: [
+    '+30 2# ### ####',
+    '2# ### ####',
+    '+30 (2#) ### ####',
+    '(2#) ### ####',
+    '+30 69# ### ####',
+    '69# ### ####',
+    '69# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.gr', 'outlook.gr', 'hotmail.gr', 'live.gr',
+    'otenet.gr', 'forthnet.gr', 'wind.com.gr', 'cosmote.gr', 'vodafone.gr'
+  ],
+
+  companyNames: [
+    'National Bank of Greece', 'Piraeus Bank', 'Alpha Bank', 'Eurobank Ergasias',
+    'OTE Group', 'OPAP SA', 'Coca-Cola HBC', 'Titan Cement', 'Motor Oil Hellas',
+    'Hellenic Petroleum', 'Jumbo SA', 'Folli Follie', 'Lamda Development',
+    'Aegean Airlines', 'Mytilineos Holdings', 'GEK Terna', 'Ellaktor SA'
+  ],
+
+  industries: [
+    'Τεχνολογία', 'Χρηματοοικονομικά', 'Υγεία', 'Εκπαίδευση', 'Λιανική',
+    'Κατασκευές', 'ΜΜΕ', 'Τηλεπικοινωνίες', 'Ενέργεια', 'Μεταφορές',
+    'Ακίνητα', 'Συμβουλευτική', 'Ξενοδοχεία', 'Αυτοκινητοβιομηχανία', 'Αεροπορία'
+  ],
+
+  catchPhrases: [
+    'Καινοτομία για το μέλλον', 'Η επιτυχία σας είναι η δουλειά μας', 'Χτίζουμε το μέλλον μαζί',
+    'Ποιότητα και εμπιστοσύνη', 'Αριστεία και δέσμευση', 'Βιώσιμες λύσεις',
+    'Δημιουργούμε αξία', 'Ο αξιόπιστος συνεργάτης σας', 'Ηγούμαστε της αλλαγής'
+  ]
 };

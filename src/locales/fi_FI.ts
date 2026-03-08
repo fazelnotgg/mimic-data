@@ -62,5 +62,41 @@ export const fi_FI: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(10000, 99999));
-  }
+  },
+
+  phoneFormats: [
+    '+358 ## ### ####',
+    '0## ### ####',
+    '+358 (0)## ### ####',
+    '0## #######',
+    '04# ### ####',
+    '040 ### ####',
+    '044 ### ####',
+    '045 ### ####',
+    '050 ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.fi', 'outlook.fi', 'hotmail.fi', 'live.fi',
+    'elisanet.fi', 'luukku.com', 'kolumbus.fi', 'pp.inet.fi', 'mbnet.fi'
+  ],
+
+  companyNames: [
+    'Nokia Oyj', 'Neste Oyj', 'Nordea Bank', 'Kone Oyj', 'Fortum Oyj',
+    'UPM-Kymmene', 'Stora Enso', 'Wärtsilä Oyj', 'Metso Outotec', 'Sampo Group',
+    'Elisa Oyj', 'Telia Finland', 'DNA Oyj', 'Kesko Oyj', 'S-Group',
+    'Valio Ltd', 'Hartwall Oy', 'Fiskars Oyj', 'Marimekko Oyj', 'Rovio Entertainment'
+  ],
+
+  industries: [
+    'Teknologia', 'Rahoitus', 'Terveys', 'Koulutus', 'Vähittäiskauppa',
+    'Valmistus', 'Media', 'Telekommunikaatio', 'Energia', 'Kuljetus',
+    'Kiinteistöt', 'Konsultointi', 'Hotellit', 'Autoteollisuus', 'Ilmailu'
+  ],
+
+  catchPhrases: [
+    'Innovaatioita tulevaisuuteen', 'Menestyksesi on asiamme', 'Rakennamme tulevaisuutta yhdessä',
+    'Laatua ja luotettavuutta', 'Erinomaista sitoutumista', 'Kestäviä ratkaisuja',
+    'Luomme arvoa', 'Luotettava kumppanisi', 'Johdamme muutosta'
+  ]
 };

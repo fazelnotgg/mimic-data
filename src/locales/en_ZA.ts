@@ -59,5 +59,40 @@ export const en_ZA: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(1000, 9999));
-  }
+  },
+
+  phoneFormats: [
+    '+27 ## ### ####',
+    '0## ### ####',
+    '+27 (0)## ### ####',
+    '0## #### ####',
+    '06# ### ####',
+    '07# ### ####',
+    '08# ### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.co.za', 'outlook.co.za', 'hotmail.co.za', 'live.co.za',
+    'telkomsa.net', 'mweb.co.za', 'vodamail.co.za', 'absamail.co.za', 'iafrica.com'
+  ],
+
+  companyNames: [
+    'Naspers Limited', 'Prosus NV', 'Anglo American plc', 'BHP Billiton', 'Rio Tinto',
+    'Standard Bank Group', 'FirstRand Limited', 'Absa Group', 'Nedbank Group',
+    'Capitec Bank', 'Discovery Limited', 'Old Mutual', 'Sanlam Limited',
+    'MTN Group', 'Telkom SA', 'Vodacom Group', 'Shoprite Holdings', 'Pick n Pay Stores',
+    'Woolworths Holdings', 'Massmart Holdings', 'Sasol Limited', 'Impala Platinum'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

@@ -31,6 +31,18 @@ export interface WorkData {
   department: string;
 }
 
+export interface ContactData {
+  email: string;
+  phone: string;
+  website: string;
+}
+
+export interface CompanyData {
+  name: string;
+  industry: string;
+  catchPhrase: string;
+}
+
 export interface AgeRange {
   min?: number;
   max?: number;
@@ -53,4 +65,9 @@ export interface LocaleDefinition extends LocaleData {
   formatFullName(firstName: string, lastName: string): string;
   formatAddress(street: string, city: string, state: string, zipCode: string): string;
   generateZipCode(): string;
+  phoneFormats?: string[];
+  emailDomains?: string[];
+  companyNames?: string[];
+  industries?: string[];
+  catchPhrases?: string[];
 }

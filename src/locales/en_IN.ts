@@ -62,5 +62,40 @@ export const en_IN: LocaleDefinition = {
 
   generateZipCode(): string {
     return String(Random.int(100000, 999999));
-  }
+  },
+
+  phoneFormats: [
+    '+91 ##### #####',
+    '0##### #####',
+    '+91 (0)##### #####',
+    '9##### #####',
+    '8##### #####',
+    '7##### #####',
+    '6##### #####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.co.in', 'outlook.in', 'hotmail.co.in', 'live.in',
+    'rediffmail.com', 'sify.com', 'sancharnet.in', 'vsnl.com', 'dataone.in'
+  ],
+
+  companyNames: [
+    'Tata Consultancy Services', 'Reliance Industries', 'HDFC Bank', 'Infosys Limited',
+    'ICICI Bank', 'Hindustan Unilever', 'ITC Limited', 'Bharti Airtel',
+    'State Bank of India', 'Larsen & Toubro', 'Wipro Limited', 'Tata Motors',
+    'Mahindra & Mahindra', 'Maruti Suzuki', 'Bajaj Finance', 'Asian Paints',
+    'Titan Company', 'Sun Pharmaceutical', 'Dr Reddy\'s Laboratories', 'Zomato Limited'
+  ],
+
+  industries: [
+    'Technology', 'Finance', 'Healthcare', 'Education', 'Retail',
+    'Manufacturing', 'Media', 'Telecommunications', 'Energy', 'Transport',
+    'Real Estate', 'Consulting', 'Hospitality', 'Automotive', 'Aerospace'
+  ],
+
+  catchPhrases: [
+    'Innovating for the future', 'Your success is our business', 'Building the future together',
+    'Quality and trust', 'Excellence and commitment', 'Sustainable solutions',
+    'Creating value', 'Your trusted partner', 'Leading the change'
+  ]
 };

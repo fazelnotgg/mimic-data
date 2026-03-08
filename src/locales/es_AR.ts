@@ -69,5 +69,42 @@ export const es_AR: LocaleDefinition = {
                     String.fromCharCode(65 + Random.int(0, 25)) +
                     String.fromCharCode(65 + Random.int(0, 25));
     return `${letter}${digits}${letters}`;
-  }
+  },
+
+  phoneFormats: [
+    '+54 9 ## #### ####',
+    '0## #### ####',
+    '+54 (0)## #### ####',
+    '011 #### ####',
+    '0341 #### ####',
+    '0351 #### ####',
+    '0261 #### ####',
+    '0223 #### ####'
+  ],
+
+  emailDomains: [
+    'gmail.com', 'yahoo.com.ar', 'outlook.com', 'hotmail.com', 'live.com',
+    'fibertel.com.ar', 'speedy.com.ar', 'arnet.com.ar', 'cablenet.com.ar',
+    'telecentro.com.ar', 'claro.com.ar'
+  ],
+
+  companyNames: [
+    'YPF Sociedad Anónima', 'Grupo Galicia', 'Banco Santander Río', 'Banco Nación',
+    'Mercado Libre', 'Globant SE', 'Telecom Argentina', 'Telefónica Argentina',
+    'Aerolíneas Argentinas', 'Aluar Aluminio Argentino', 'Arcor SAIC', 'Molinos Río de la Plata',
+    'Grupo Clarín', 'Cablevisión', 'Pampa Energía', 'Transener SA', 'Edenor SA',
+    'Tenaris SA', 'Siderar SA', 'Petrobras Argentina'
+  ],
+
+  industries: [
+    'Tecnología', 'Finanzas', 'Salud', 'Educación', 'Venta minorista',
+    'Fabricación', 'Medios', 'Telecomunicaciones', 'Energía', 'Transporte',
+    'Inmobiliaria', 'Consultoría', 'Hostelería', 'Automoción', 'Aeroespacial'
+  ],
+
+  catchPhrases: [
+    'Innovando para el futuro', 'Su éxito es nuestro negocio', 'Construyendo el futuro juntos',
+    'Calidad y confianza', 'Excelencia y compromiso', 'Soluciones sostenibles',
+    'Creamos valor', 'Su socio de confianza', 'Liderando el cambio'
+  ]
 };
