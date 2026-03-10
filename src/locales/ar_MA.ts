@@ -1,7 +1,7 @@
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
-export const ma_MA: LocaleDefinition = {
+export const ar_MA: LocaleDefinition = {
   firstNamesMale: [
     'Mohammed', 'Ahmed', 'Ali', 'Hassan', 'Hussain', 'Abdul', 'Rahman', 'Rahim',
     'Karim', 'Malik', 'Imran', 'Bilal', 'Faisal', 'Waseem', 'Naveed', 'Shahid',

@@ -1,7 +1,7 @@
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
-export const ng_NG: LocaleDefinition = {
+export const en_NG: LocaleDefinition = {
   firstNamesMale: [
     'Chukwudi', 'Oluwaseun', 'Adebayo', 'Ifeanyi', 'Nnamdi', 'Kemi', 'Tunde',
     'Emeka', 'Chinedu', 'Olumide', 'Babatunde', 'Folake', 'Wale', 'Akin',

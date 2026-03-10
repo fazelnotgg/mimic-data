@@ -1,7 +1,7 @@
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
-export const ke_KE: LocaleDefinition = {
+export const en_KE: LocaleDefinition = {
   firstNamesMale: [
     'Kamau', 'Omondi', 'Wanjohi', 'Kimani', 'Njoroge', 'Mwangi', 'Kariuki',
     'Maina', 'Kipchoge', 'Chebet', 'Sang', 'Koech', 'Rono', 'Cheruiyot',

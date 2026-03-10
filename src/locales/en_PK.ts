@@ -1,7 +1,7 @@
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
-export const pk_PK: LocaleDefinition = {
+export const en_PK: LocaleDefinition = {
   firstNamesMale: [
     'Muhammad', 'Ahmed', 'Ali', 'Hassan', 'Usman', 'Abdul', 'Razaq', 'Kareem',
     'Rahman', 'Rahim', 'Malik', 'Imran', 'Bilal', 'Faisal', 'Waseem', 'Naveed',

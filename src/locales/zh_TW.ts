@@ -1,7 +1,7 @@
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
-export const tw_TW: LocaleDefinition = {
+export const zh_TW: LocaleDefinition = {
   lastNames: [
     'Chen', 'Lin', 'Huang', 'Zhang', 'Li', 'Wang', 'Wu', 'Liu', 'Tsai', 'Yang',
     'Chen', 'Lin', 'Huang', 'Zhang', 'Li', 'Wang', 'Wu', 'Liu', 'Tsai', 'Yang',

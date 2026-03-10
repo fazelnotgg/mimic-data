@@ -1,7 +1,7 @@
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
-export const bd_BD: LocaleDefinition = {
+export const bn_BD: LocaleDefinition = {
   firstNamesMale: [
     'Rahim', 'Karim', 'Abdul', 'Mohammad', 'Ahmed', 'Ali', 'Hassan', 'Hussain',
     'Ibrahim', 'Ismail', 'Kamal', 'Jamal', 'Mizanur', 'Habibur', 'Shafiqur',

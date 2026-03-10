@@ -1,7 +1,7 @@
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
-export const co_CO: LocaleDefinition = {
+export const es_CO: LocaleDefinition = {
   firstNamesMale: [
     'Juan', 'Carlos', 'Andrés', 'Luis', 'Jorge', 'Mario', 'José', 'Pedro',
     'Miguel', 'Ángel', 'Rafael', 'Antonio', 'Francisco', 'Javier', 'Alejandro',
