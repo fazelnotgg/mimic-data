@@ -1,11 +1,16 @@
 # mimic-data
 
+[![npm version](https://img.shields.io/npm/v/mimic-data.svg)](https://www.npmjs.com/package/mimic-data)
+[![npm downloads](https://img.shields.io/npm/dt/mimic-data.svg)](https://www.npmjs.com/package/mimic-data)
+[![License](https://img.shields.io/npm/l/m)](https://opensourceimic-data.svg.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-3178c6.svg)](https://www.typescriptlang.org/)
+
 Library TypeScript ringan tanpa dependency eksternal untuk menghasilkan data dummy yang realistis dengan dukungan lokalisasi yang kuat.
 
 ## ✨ Fitur
 
-- 🌍 **44 Locale** - Coverage global yang sangat luas
-- 🪶 **Ringan** - Zero runtime dependencies  
+- 🌍 **101 Locale** - Coverage global yang sangat luas
+- 🪶 **Ringan** - Zero runtime dependencies (~15KB minified)
 - 📦 **Tree-shakeable** - Hanya bundle yang Anda gunakan
 - 🔧 **TypeScript Native** - Full type safety
 - 🎯 **Mudah Digunakan** - API yang sederhana dan intuitif
@@ -20,9 +25,7 @@ yarn add mimic-data
 pnpm add mimic-data
 ```
 
-## 🚀 Penggunaan Dasar
-
-### Metode 1: Factory Function (Rekomendasi)
+## 🚀 Quick Start
 
 ```typescript
 import { createMimic } from 'mimic-data';
@@ -38,19 +41,72 @@ console.log(mimic.location.fullAddress());
 // Output: "Jl. Merdeka No. 123, RT 5/RW 3, Jakarta, DKI Jakarta 12345"
 ```
 
-### Metode 2: Class Langsung
+## 📚 API Overview
+
+### `createMimic(locale?: string): Mimic`
+Buat instance Mimic dengan locale tertentu. Default: `en_US`
 
 ```typescript
-import { Mimic, locales } from 'mimic-data';
-
-const mimic = new Mimic(locales.ja_JP);
-
-console.log(mimic.identity.fullName());
-// Output: "Tanaka Kenji"
-
-console.log(mimic.location.fullAddress());
-// Output: "〒123-4567 Tokyo, Yokohama, Chuo-dori 2-5-10"
+const mimic = createMimic('ja_JP');
+const mimicDefault = createMimic(); // menggunakan en_US
 ```
+
+### Module Exports
+
+| Export | Deskripsi |
+|--------|-----------|
+| `createMimic` | Factory function untuk membuat instance Mimic |
+| `Mimic` | Class utama untuk generate data |
+| `locales` | Object semua locale definitions |
+| `Random` | Utility untuk random generation |
+| `localeRegistry` | Registry untuk manage locales |
+| `getAvailableLocales()` | Get semua locale codes utama |
+| `getAllLocaleCodes()` | Get semua locale codes + aliases |
+
+### Mimic Methods
+
+| Module | Method | Deskripsi |
+|--------|--------|-----------|
+| `identity` | `firstName(gender?)` | Nama depan (male/female/random) |
+| | `lastName()` | Nama belakang |
+| | `fullName(gender?)` | Nama lengkap (format budaya) |
+| | `gender()` | Gender (male/female) |
+| | `age(range?)` | Umur (default 18-65) |
+| | `dateOfBirth(range?)` | Tanggal lahir |
+| | `person(gender?, range?)` | Semua data person |
+| | `persons(count, gender?, range?)` | Generate multiple persons |
+| | `uniquePersons(count, gender?, range?)` | Generate unique persons |
+| `location` | `street()` | Nama jalan |
+| | `city()` | Kota |
+| | `state()` | Provinsi/State |
+| | `zipCode()` | Kode pos |
+| | `fullAddress()` | Alamat lengkap |
+| | `address()` | Semua data address |
+| | `addresses(count)` | Generate multiple addresses |
+| | `uniqueAddresses(count)` | Generate unique addresses |
+| `physical` | `height()` | Tinggi badan |
+| | `weight()` | Berat badan |
+| | `data()` | Semua data fisik |
+| | `datas(count)` | Generate multiple physical data |
+| `work` | `jobTitle()` | Judul pekerjaan |
+| | `department()` | Departemen |
+| | `data()` | Semua data pekerjaan |
+| | `datas(count)` | Generate multiple work data |
+| | `uniqueJobTitles(count)` | Unique job titles |
+| | `uniqueDepartments(count)` | Unique departments |
+| `contact` | `email(firstName?, lastName?)` | Email address |
+| | `phone()` | Nomor telepon |
+| | `website(name?)` | Website URL |
+| | `data(firstName?, lastName?)` | Semua data kontak |
+| | `datas(count)` | Generate multiple contact data |
+| `company` | `name()` | Nama perusahaan |
+| | `industry()` | Industri |
+| | `catchPhrase()` | Tagline perusahaan |
+| | `data()` | Semua data perusahaan |
+| | `datas(count)` | Generate multiple company data |
+| `Mimic` | `setLocale(locale)` | Ganti locale |
+| | `generateMockEntities(count, options?)` | Generate complete entities |
+| | `generateUniqueMockEntities(count, options?)` | Generate unique entities |
 
 ## 🌏 Locale yang Tersedia (101 Locale!)
 
@@ -165,290 +221,80 @@ console.log(mimic.location.fullAddress());
 
 **Total: 101 Locale dengan 250+ Aliases!**
 
-## 📚 API Reference
+## 💻 Contoh Penggunaan
 
-### Identity (Identitas)
-
-```typescript
-// Nama depan berdasarkan gender
-mimic.identity.firstName('male');    // "Takashi"
-mimic.identity.firstName('female');  // "Yuki"
-mimic.identity.firstName();          // Random gender
-
-// Nama belakang
-mimic.identity.lastName();           // "Tanaka"
-
-// Nama lengkap (format sesuai budaya)
-mimic.identity.fullName('male');     // Japan: "Tanaka Takashi"
-                                     // US: "John Smith"
-                                     // ID: "Budi Santoso"
-
-// Gender
-mimic.identity.gender();             // "male" | "female"
-
-// Umur dengan range
-mimic.identity.age();                // 18-65 (default)
-mimic.identity.age({ min: 25, max: 40 }); // Custom range
-
-// Tanggal lahir
-mimic.identity.dateOfBirth();
-mimic.identity.dateOfBirth({ min: 30, max: 50 });
-
-// Generate semua data person sekaligus
-const person = mimic.identity.person('female', { min: 25, max: 35 });
-// {
-//   firstName: "Yuki",
-//   lastName: "Tanaka",
-//   fullName: "Tanaka Yuki",
-//   gender: "female",
-//   age: 28,
-//   dateOfBirth: Date
-// }
-
-// 🚀 NEW: Generate multiple persons at once
-const persons = mimic.identity.persons(10); // Array of 10 persons
-
-// 🚀 NEW: Generate unique persons (no duplicate full names)
-const uniquePersons = mimic.identity.uniquePersons(5);
-```
-
-### Location (Lokasi)
+### Penggunaan Dasar
 
 ```typescript
-// Komponen alamat individual
-mimic.location.street();     // "Chuo-dori"
-mimic.location.city();       // "Tokyo"
-mimic.location.state();      // "Kanagawa"
-mimic.location.zipCode();    // "123-4567" (Japan format)
+import { createMimic } from 'mimic-data';
 
-// Alamat lengkap (format sesuai negara)
-mimic.location.fullAddress();
-// Japan: "〒123-4567 Tokyo, Yokohama, Chuo-dori 2-5-10"
-// US: "1234 Main Street, New York, California 12345"
-// ID: "Jl. Merdeka No. 123, RT 5/RW 3, Jakarta, DKI Jakarta 12345"
+const mimic = createMimic('ja_JP');
 
-// Generate semua data address sekaligus
-const address = mimic.location.address();
-// {
-//   street: "Chuo-dori",
-//   city: "Tokyo",
-//   state: "Kanagawa",
-//   zipCode: "123-4567",
-//   fullAddress: "〒123-4567 Tokyo, Yokohama, Chuo-dori 2-5-10"
-// }
+console.log(mimic.identity.fullName());
+// Output: "Tanaka Kenji"
 
-// 🚀 NEW: Generate multiple addresses at once
-const addresses = mimic.location.addresses(10); // Array of 10 addresses
-
-// 🚀 NEW: Generate unique addresses (no duplicate full addresses)
-const uniqueAddresses = mimic.location.uniqueAddresses(5);
+console.log(mimic.location.fullAddress());
+// Output: "〒123-4567 Tokyo, Yokohama, Chuo-dori 2-5-10"
 ```
 
-### Physical (Data Fisik)
+### Dengan Class Langsung
 
 ```typescript
-// Tinggi (unit sesuai locale)
-mimic.physical.height();
-// Metric: { height: 175, weight: 0, heightUnit: 'cm', weightUnit: 'kg' }
-// Imperial: { height: 5.9, weight: 0, heightUnit: 'ft', weightUnit: 'lb' }
+import { Mimic, locales } from 'mimic-data';
 
-// Berat (unit sesuai locale)
-mimic.physical.weight();
-// Metric: { height: 0, weight: 70, heightUnit: 'cm', weightUnit: 'kg' }
-// Imperial: { height: 0, weight: 154, heightUnit: 'ft', weightUnit: 'lb' }
-
-// Generate semua data physical sekaligus
-const physical = mimic.physical.data();
-// Metric: { height: 175, weight: 70, heightUnit: 'cm', weightUnit: 'kg' }
-// Imperial: { height: 5.9, weight: 154, heightUnit: 'ft', weightUnit: 'lb' }
-
-// 🚀 NEW: Generate multiple physical data at once
-const physicals = mimic.physical.datas(10); // Array of 10 physical data
+const mimic = new Mimic(locales.de_DE);
+console.log(mimic.identity.fullName('female'));
+// Output: "Maria Müller"
 ```
 
-### Work (Data Pekerjaan)
-
-```typescript
-mimic.work.jobTitle();      // "Software Engineer"
-mimic.work.department();    // "Engineering"
-
-// Generate semua data work sekaligus
-const work = mimic.work.data();
-// {
-//   jobTitle: "Software Engineer",
-//   department: "Engineering"
-// }
-
-// 🚀 NEW: Generate multiple work data at once
-const works = mimic.work.datas(10); // Array of 10 work data
-
-// 🚀 NEW: Generate unique job titles
-const uniqueJobTitles = mimic.work.uniqueJobTitles(5);
-
-// 🚀 NEW: Generate unique departments
-const uniqueDepartments = mimic.work.uniqueDepartments(3);
-```
-
-### Contact (Kontak) - NEW! 📧
-
-```typescript
-// Generate email
-mimic.contact.email('John', 'Doe');  // "john.doe123@gmail.com"
-mimic.contact.email('Jane');         // "jane456@yahoo.com"
-mimic.contact.email();               // "random789@outlook.com"
-
-// Generate phone number (locale-specific format)
-mimic.contact.phone();  // US: "+1 (555) 123-4567"
-                        // ID: "+62 812-3456-7890"
-
-// Generate website
-mimic.contact.website();        // "www.acme-corp.com"
-mimic.contact.website('Google');// "www.google.com"
-
-// Generate complete contact data
-const contact = mimic.contact.data('John', 'Doe');
-// {
-//   email: "john.doe123@gmail.com",
-//   phone: "+1 (555) 123-4567",
-//   website: "www.john-doe.com"
-// }
-
-// 🚀 Generate multiple contact data
-const contacts = mimic.contact.datas(10);
-```
-
-### Company (Perusahaan) - NEW! 🏢
-
-```typescript
-// Generate company name
-mimic.company.name();  // "Techflow Solutions"
-                       // "PT Telkom Indonesia" (id_ID)
-
-// Generate industry
-mimic.company.industry();  // "Technology"
-                           // "Teknologi" (id_ID)
-
-// Generate catch phrase
-mimic.company.catchPhrase();  // "Empower innovative solutions"
-
-// Generate complete company data
-const company = mimic.company.data();
-// {
-//   name: "Quantumspark Labs",
-//   industry: "Technology",
-//   catchPhrase: "Transform cutting-edge experiences"
-// }
-
-// 🚀 Generate multiple company data
-const companies = mimic.company.datas(10);
-```
-
-### Mengganti Locale
-
-```typescript
-const mimic = createMimic('en_US');
-console.log(mimic.identity.fullName()); // "John Smith"
-
-mimic.setLocale(locales.ja_JP);
-console.log(mimic.identity.fullName()); // "Tanaka Kenji"
-```
-
-## 🚀 Fitur Baru (v1.1.0)
-
-### 🔁 Seeded Random (Reproducible Data)
-
-Generate data yang sama secara konsisten untuk testing:
+### Seeded Random (Reproducible Data)
 
 ```typescript
 import { createMimic, Random } from 'mimic-data';
 
-// Set seed untuk reproducible randomness
 Random.seed(12345);
 
 const mimic = createMimic('en_US');
 const person1 = mimic.identity.person('male', { min: 25, max: 35 });
 
-// Reset seed yang sama
 Random.seed(12345);
 const person2 = mimic.identity.person('male', { min: 25, max: 35 });
 
-// person1 dan person2 akan IDENTIK!
 console.log(person1.fullName === person2.fullName); // true
-console.log(person1.age === person2.age); // true
 
-// Reset ke random non-deterministik
 Random.unseed();
 ```
 
-### 📦 Bulk Generation
-
-Generate banyak data sekaligus dengan performa optimal:
+### Bulk Generation
 
 ```typescript
 import { createMimic } from 'mimic-data';
 
 const mimic = createMimic('id_ID');
 
-// Generate 100 persons sekaligus
 const persons = mimic.identity.persons(100);
-
-// Generate 50 unique addresses (no duplicates)
 const addresses = mimic.location.uniqueAddresses(50);
 
-// Generate 200 complete mock entities
-const entities = mimic.generateMockEntities(200, {
+const employees = mimic.generateMockEntities(200, {
   gender: 'female',
   ageRange: { min: 20, max: 40 }
 });
-
-// Generate unique mock entities
-const uniqueEntities = mimic.generateUniqueMockEntities(100);
 ```
 
-### 🎯 Random Utilities
-
-```typescript
-import { Random } from 'mimic-data';
-
-// Generate multiple values
-const numbers = Random.multiple(() => Random.int(1, 100), 10);
-
-// Generate unique values (no duplicates)
-const uniqueNumbers = Random.unique(() => Random.int(1, 1000), 20);
-
-// Shuffle array
-const shuffled = Random.shuffle([1, 2, 3, 4, 5]);
-
-// Pick random element
-const randomItem = Random.pick(['apple', 'banana', 'cherry']);
-```
-
-### ⚡ Performance Improvements
-
-- **Caching**: Generator methods di-cache untuk performa lebih cepat
-- **Bulk Operations**: Generate banyak data dalam satu panggilan
-- **Optimized Getters**: Tidak ada recreation pada setiap akses
-
-```typescript
-// Getter methods sekarang di-cache (lebih cepat)
-const identity1 = mimic.identity;
-const identity2 = mimic.identity;
-console.log(identity1 === identity2); // true (same cached instance)
-```
-
-## 🎯 Contoh Lengkap
+### Complete Employee Data
 
 ```typescript
 import { createMimic } from 'mimic-data';
 
-// Generate data karyawan Indonesia
 const mimic = createMimic('id_ID');
 
 const employee = {
   ...mimic.identity.person('male', { min: 25, max: 40 }),
   ...mimic.location.address(),
   ...mimic.physical.data(),
-  ...mimic.work.data()
+  ...mimic.work.data(),
+  ...mimic.contact.data(),
+  ...mimic.company.data()
 };
 
 console.log(employee);
@@ -469,8 +315,107 @@ console.log(employee);
 //   heightUnit: "cm",
 //   weightUnit: "kg",
 //   jobTitle: "Software Engineer",
-//   department: "Engineering"
+//   department: "Engineering",
+//   email: "budi.santoso123@gmail.com",
+//   phone: "+62 812-3456-7890",
+//   website: "www.budi-santoso.com",
+//   name: "Techflow Solutions",
+//   industry: "Technology",
+//   catchPhrase: "Empower innovative solutions"
 // }
+```
+
+## 🔧 TypeScript Types
+
+```typescript
+import { 
+  Gender, 
+  MetricSystem,
+  PersonData,
+  AddressData, 
+  PhysicalData, 
+  WorkData,
+  ContactData,
+  CompanyData,
+  AgeRange,
+  LocaleDefinition
+} from 'mimic-data';
+
+const person: PersonData = mimic.identity.person('female', { min: 25, max: 35 });
+const address: AddressData = mimic.location.address();
+const physical: PhysicalData = mimic.physical.data();
+const work: WorkData = mimic.work.data();
+const contact: ContactData = mimic.contact.data();
+const company: CompanyData = mimic.company.data();
+```
+
+### Type Definitions
+
+```typescript
+type Gender = 'male' | 'female';
+type MetricSystem = 'metric' | 'imperial';
+
+interface PersonData {
+  firstName: string;
+  lastName: string;
+  fullName: string;
+  gender: Gender;
+  age: number;
+  dateOfBirth: Date;
+}
+
+interface AddressData {
+  street: string;
+  city: string;
+  state: string;
+  zipCode: string;
+  fullAddress: string;
+}
+
+interface PhysicalData {
+  height: number;
+  weight: number;
+  heightUnit: 'cm' | 'ft';
+  weightUnit: 'kg' | 'lb';
+}
+
+interface WorkData {
+  jobTitle: string;
+  department: string;
+}
+
+interface ContactData {
+  email: string;
+  phone: string;
+  website: string;
+}
+
+interface CompanyData {
+  name: string;
+  industry: string;
+  catchPhrase: string;
+}
+
+interface AgeRange {
+  min?: number;
+  max?: number;
+}
+```
+
+## 🎲 Random Utilities
+
+```typescript
+import { Random } from 'mimic-data';
+
+Random.seed(12345);
+
+Random.int(1, 100);
+Random.float(1.5, 10.5, 2);
+Random.boolean();
+Random.pick(['a', 'b', 'c']);
+Random.shuffle([1, 2, 3, 4, 5]);
+Random.multiple(() => Random.int(1, 100), 10);
+Random.unique(() => Random.int(1, 1000), 20);
 ```
 
 ## 🛠️ Development
@@ -500,7 +445,7 @@ MIT
 
 Kontribusi sangat diterima! Silakan buka issue atau pull request.
 
-### Menambahkan Locale Baru (Sangat Mudah!)
+### Menambahkan Locale Baru
 
 Dengan **Registry System**, menambah locale baru sangat mudah:
 
@@ -508,33 +453,28 @@ Dengan **Registry System**, menambah locale baru sangat mudah:
 2. **Implement interface** `LocaleDefinition`
 3. **Import dan register** di `src/index.ts`
 
-**Contoh: Menambahkan locale Spanyol**
-
 ```typescript
 // 1. Buat file: src/locales/es_ES.ts
 import { LocaleDefinition } from '../types';
 import { Random } from '../core/random';
 
 export const es_ES: LocaleDefinition = {
-  firstNamesMale: ['Carlos', 'José', 'Antonio', ...],
-  firstNamesFemale: ['María', 'Carmen', 'Ana', ...],
-  lastNames: ['García', 'Fernández', 'López', ...],
-  streets: ['Calle Mayor', 'Avenida Castellana', ...],
-  cities: ['Madrid', 'Barcelona', 'Valencia', ...],
-  states: ['Madrid', 'Cataluña', 'Andalucía', ...],
+  firstNamesMale: ['Carlos', 'José', 'Antonio'],
+  firstNamesFemale: ['María', 'Carmen', 'Ana'],
+  lastNames: ['García', 'Fernández', 'López'],
+  streets: ['Calle Mayor', 'Avenida Castellana'],
+  cities: ['Madrid', 'Barcelona', 'Valencia'],
+  states: ['Madrid', 'Cataluña', 'Andalucía'],
   zipCodePattern: '#####',
-  jobTitles: ['Ingeniero de Software', ...],
-  departments: ['Ingeniería', 'Marketing', ...],
+  jobTitles: ['Ingeniero de Software'],
+  departments: ['Ingeniería', 'Marketing'],
   metricSystem: 'metric',
-  
   formatFullName(firstName, lastName) {
     return `${firstName} ${lastName}`;
   },
-  
   formatAddress(street, city, state, zipCode) {
     return `${street} ${Random.int(1, 200)}, ${zipCode} ${city}`;
   },
-  
   generateZipCode() {
     return String(Random.int(10000, 99999));
   }
@@ -543,19 +483,6 @@ export const es_ES: LocaleDefinition = {
 // 2. Register di src/index.ts
 import { es_ES } from './locales/es_ES';
 localeRegistry.register('es_ES', es_ES, ['es', 'spain', 'españa']);
-
-// 3. Export (opsional, untuk advanced usage)
-export const locales = {
-  // ... existing locales
-  es_ES
-};
-```
-
-**Selesai!** Locale baru Anda langsung tersedia:
-
-```typescript
-const mimic = createMimic('es'); // atau 'es_ES' atau 'spain'
-console.log(mimic.identity.fullName()); // "Carlos García"
 ```
 
 ## 🙏 Acknowledgments
